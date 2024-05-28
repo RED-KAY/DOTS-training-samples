@@ -228,11 +228,12 @@ public class AntManager : MonoBehaviour {
 
 		pheromoneTexture = new Texture2D(mapSize,mapSize);
 		pheromoneTexture.wrapMode = TextureWrapMode.Mirror;
-		pheromones = new Color[mapSize * mapSize];
 		myPheromoneMaterial = new Material(basePheromoneMaterial);
 		myPheromoneMaterial.mainTexture = pheromoneTexture;
 		pheromoneRenderer.sharedMaterial = myPheromoneMaterial;
-		ants = new Ant[antCount];
+
+        pheromones = new Color[mapSize * mapSize];
+        ants = new Ant[antCount];
 		matrices = new Matrix4x4[Mathf.CeilToInt((float)antCount / instancesPerBatch)][];
 		for (int i=0;i<matrices.Length;i++) {
 			if (i<matrices.Length-1) {
@@ -261,6 +262,7 @@ public class AntManager : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+		// return;
 		for (int i = 0; i < ants.Length; i++) {
 			Ant ant = ants[i];
 			float targetSpeed = antSpeed;
