@@ -43,6 +43,7 @@ namespace AntPheromones.Authoring
         [Range(0f, 1f)]
         public float m_ObstaclesPerRing;
         public float m_ObstacleRadius;
+        public int m_InstancesPerBatch = 1023;
 
         public class ManagerBaker : Baker<ManagerAuthoring>
         {
@@ -69,7 +70,8 @@ namespace AntPheromones.Authoring
                     m_RotationResolution = authoring.m_RotationResolution,
                     m_ObstacleRingCount = authoring.m_ObstacleRingCount,
                     m_ObstaclesPerRing = authoring.m_ObstaclesPerRing,
-                    m_ObstacleRadius = authoring.m_ObstacleRadius
+                    m_ObstacleRadius = authoring.m_ObstacleRadius,
+                    m_InstancesPerBatch = authoring.m_InstancesPerBatch
                 };
 
 
@@ -106,6 +108,8 @@ namespace AntPheromones.Authoring
         public float m_FacingAngle;
         public float m_Speed;
         public float m_Brightness;
+        public float4x4 m_TransformationMatrix;
+        public float3 m_Scale;
     }
 
     public struct Config : IComponentData
@@ -128,6 +132,7 @@ namespace AntPheromones.Authoring
         public int m_ObstacleRingCount;
         public float m_ObstaclesPerRing;
         public float m_ObstacleRadius;
+        public int m_InstancesPerBatch;
     }
 
     public struct DrawingDataTest : ISharedComponentData, IEquatable<DrawingDataTest>

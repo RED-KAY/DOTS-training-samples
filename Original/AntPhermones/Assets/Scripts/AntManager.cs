@@ -424,5 +424,6 @@ public class AntManager : MonoBehaviour {
 
 		Graphics.DrawMesh(colonyMesh,colonyMatrix,colonyMaterial,0);
 		Graphics.DrawMesh(resourceMesh,resourceMatrix,resourceMaterial,0);
+		Debug.Log("s");
 	}
 }

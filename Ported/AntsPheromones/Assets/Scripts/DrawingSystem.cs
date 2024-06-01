@@ -28,6 +28,8 @@ namespace AntPheromones.Systems
         private Matrix4x4 colonyMatrix;
         private Matrix4x4 resourceMatrix;
 
+        private Matrix4x4[] rotationMatrixLookup;
+
         protected override void OnCreate()
         {
             RequireForUpdate<Config>();
@@ -47,11 +49,26 @@ namespace AntPheromones.Systems
 
                 CreateBatches();
                 InitializeMaterialsAndTextures();
+
+                int rotationResolution = m_Config.m_RotationResolution;
+
+                rotationMatrixLookup = new Matrix4x4[rotationResolution];
+                for (int i = 0; i < rotationResolution; i++)
+                {
+                    float angle = (float)i / rotationResolution;
+                    angle *= 360f;
+                    rotationMatrixLookup[i] = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, angle), m_Config.m_AntSize);
+                }
             }
             else
             {
                 Debug.LogError("Config component not found. Ensure it is added to an entity.");
             }
+        }
+
+        protected override void OnStopRunning()
+        {
+            base.OnStopRunning();
         }
 
         private void CreateBatches()
@@ -131,20 +148,51 @@ namespace AntPheromones.Systems
             {
                 antColors[i] = new Vector4[matrices[i].Length];
                 matProps[i] = new MaterialPropertyBlock();
+                matProps[i].SetColor("Color", Color.red);
             }
         }
 
         protected override void OnUpdate()
         {
             Debug.Log("Drawing System updating... ");
-            // for (int i = 0; i < matrices.Length; i++)
-            // {
-            //     Graphics.DrawMeshInstanced(m_DrawingDataTest.m_AntMesh, 0, m_DrawingDataTest.m_AntMaterial, matrices[i], matrices[i].Length, matProps[i]);
-            // }
+
+
+            int i = 0;
+            int j = 0;
+
+            foreach (var ant in SystemAPI.Query<RefRO<Ant>>())
+            {
+                Matrix4x4 matrix = GetRotationMatrix(ant.ValueRO.m_FacingAngle);
+                matrix.m03 = ant.ValueRO.m_Position.x / m_Config.m_MapSize;
+                matrix.m13 = ant.ValueRO.m_Position.y / m_Config.m_MapSize;
+                //matrices[i / m_Config.m_InstancesPerBatch][i % m_Config.m_InstancesPerBatch] = matrix;
+                //matrices[i][j] = Matrix4x4.TRS(new Vector3(ant.ValueRO.m_Position.x, ant.ValueRO.m_Position.y, 0f), Quaternion.identity, new Vector3(ant.ValueRO.m_Scale.x, ant.ValueRO.m_Scale.y, ant.ValueRO.m_Scale.z));
+                matrices[i][j] = matrix;
+
+                if (j == matrices[i].Length - 1)
+                {
+                    if (i == matrices.Length - 1)
+                        break;
+                    else
+                    {
+                        i++;
+                    }
+                    j = 0;
+                }
+                else
+                {
+                    j++;
+                }
+            }
+
+            for (i = 0; i < matrices.Length; i++)
+            {
+                Graphics.DrawMeshInstanced(m_DrawingDataTest.m_AntMesh, 0, m_DrawingDataTest.m_AntMaterial, matrices[i], matrices[i].Length, matProps[i]);
+            }
 
             if (m_ObstacleMatrices != null || m_ObstacleMatrices.Length > 0)
             {
-                for (int i = 0; i < m_ObstacleMatrices.Length; i++)
+                for (i = 0; i < m_ObstacleMatrices.Length; i++)
                 {
                     
                     Graphics.DrawMeshInstanced(m_DrawingDataTest.m_ObstacleMesh, 0, m_DrawingDataTest.m_ObstacleMaterial, m_ObstacleMatrices[i]);
@@ -154,6 +202,14 @@ namespace AntPheromones.Systems
             
             Graphics.DrawMesh(m_DrawingDataTest.m_ColonyMesh, colonyMatrix, m_DrawingDataTest.m_ColonyMaterial, 0);
             Graphics.DrawMesh(m_DrawingDataTest.m_ResourceMesh, resourceMatrix, m_DrawingDataTest.m_ResourceMaterial, 0);
+        }
+
+        float4x4 GetRotationMatrix(float angle)
+        {
+            angle /= math.PI * 2f;
+            angle -= math.floor(angle);
+            angle *= m_Config.m_RotationResolution;
+            return rotationMatrixLookup[((int)angle) % m_Config.m_RotationResolution];
         }
     }
 }
