@@ -156,8 +156,8 @@ MonoBehaviour:
   m_RockPercentage: 40
   m_FarmerMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_FarmerMaterial: {fileID: 2100000, guid: 4fb67576865394a489ea8f3e9a7ab704, type: 2}
-  m_RockMesh: {fileID: 0}
-  m_RockMaterial: {fileID: 0}
+  m_RockMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_RockMaterial: {fileID: 2100000, guid: 7fbd300f858675245a97ee0b78c0d0dc, type: 2}
 --- !u!4 &1423099511
 Transform:
   m_ObjectHideFlags: 0

@@ -1,4 +1,6 @@
 using System.Linq;
+using Unity.Burst;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
@@ -14,6 +16,7 @@ namespace AutoFarmers.Farm
         private const int m_InstancesPerBatch = 1023;
 
         private Matrix4x4[][] m_FarmCells;
+        private Matrix4x4[][] m_Rocks;
 
         protected override void OnCreate()
         {
@@ -38,7 +41,7 @@ namespace AutoFarmers.Farm
                 }
 
                 int r = 0, c = 0;
-                float x=0, z=m_Farm.m_Size.y-1;
+                //float x=0, z=m_Farm.m_Size.y-1;
 
                 foreach (var tile in SystemAPI.Query<RefRO<Tile>>())
                 {
@@ -62,16 +65,57 @@ namespace AutoFarmers.Farm
                     }
 
 
-                    if (x < m_Farm.m_Size.x - 1)
+                    //if (x < m_Farm.m_Size.x - 1)
+                    //{
+                    //    x++;
+                    //}
+                    //else
+                    //{
+                    //    x = 0;
+                    //    if (z > 0)
+                    //    {
+                    //        z--;
+                    //    }
+                    //}
+                }
+
+                var rocksTotalCountJob = new RocksTotalCountJob
+                {
+                    m_Count = new NativeReference<int>(Allocator.TempJob)
+                };
+                var jobHandle = rocksTotalCountJob.Schedule(GetEntityQuery(ComponentType.ReadOnly<Rock>()), Dependency);
+                jobHandle.Complete();
+
+                int totalRocks = rocksTotalCountJob.m_Count.Value;
+                m_Rocks = new Matrix4x4[(int)math.ceil((float)totalRocks / (float)m_InstancesPerBatch)][];
+
+                for (int i = 0; i < m_Rocks.Length; i++)
+                {
+                    m_Rocks[i] = new Matrix4x4[math.min(m_InstancesPerBatch, totalRocks - i * m_InstancesPerBatch)];
+                }
+
+                r = c = 0;
+                foreach (var rock in SystemAPI.Query<RefRO<Rock>>())
+                {
+                    for (int i = 0; i < rock.ValueRO.m_TileIds.Length; i++)
                     {
-                        x++;
-                    }
-                    else
-                    {
-                        x = 0;
-                        if (z > 0)
+                        m_Rocks[r][c] = Matrix4x4.TRS(new UnityEngine.Vector3(rock.ValueRO.m_Positions[i].x, rock.ValueRO.m_Positions[i].y, rock.ValueRO.m_Positions[i].z), Quaternion.identity, rock.ValueRO.m_Scale);
+
+                        if (c < m_FarmCells[r].Length - 1)
                         {
-                            z--;
+                            c++;
+                        }
+                        else
+                        {
+                            c = 0;
+                            if (r < m_FarmCells.Length - 1)
+                            {
+                                r++;
+                            }
+                            else
+                            {
+                                break;
+                            }
                         }
                     }
                 }
@@ -86,6 +130,24 @@ namespace AutoFarmers.Farm
                 {
                     Graphics.DrawMeshInstanced(m_Farm.m_GroundMesh, 0, m_Farm.m_GroundMaterial, m_FarmCells[i]);
                 }
+
+                for (int i = 0;i < m_Rocks.Length; i++)
+                {
+                    Graphics.DrawMeshInstanced(m_Farm.m_RockMesh, 0, m_Farm.m_RockMaterial, m_Rocks[i]);
+                }
+            }
+        }
+    }
+
+    [BurstCompile]
+    public partial struct RocksTotalCountJob : IJobEntity
+    {
+        public NativeReference<int> m_Count;
+        private void Execute(ref Rock rock)
+        {
+            foreach (int i in rock.m_TileIds)
+            {
+                m_Count.Value++;
             }
         }
     }

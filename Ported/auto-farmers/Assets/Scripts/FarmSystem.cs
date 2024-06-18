@@ -62,6 +62,7 @@ namespace AutoFarmers.Farm
 
 
             int currentRockPercent = GetCurrentRockPercent(ref state);
+            int rockId = 0;
             while (currentRockPercent < m_Farm.m_RockPercentage)
             {
                 int width = m_Random.NextInt(1, 5);
@@ -94,14 +95,15 @@ namespace AutoFarmers.Farm
 
                 if (!notValid)
                 {
-                    Debug.Log(width + "X" + height + " - " + rockX + ", " + rockY);
+                    Debug.Log(width + "X" + height + " - " + rockX + ", " + rockY + "rockIds: " + rockTileIds.Length);
                     var rock = new Rock {
+                        m_RockId = rockId,
                         m_TileIds = new NativeArray<int>(rockTileIds.Length, Allocator.Persistent),
                         m_Positions = new NativeArray<float3>(rockTileIds.Length, Allocator.Persistent),
                         m_Scale = new float3(1, 0.5f, 1)
                     };
-                    int i = 0;
 
+                    int i = 0;
                     //TODO: optimize these 2 loops!
                     foreach (var tileId in rockTileIds)
                     {
@@ -114,15 +116,15 @@ namespace AutoFarmers.Farm
                             {
                                 rock.m_TileIds[i] = tileId;
                                 rock.m_Positions[i] = tile.ValueRO.m_Position + new float3(0, 0.25f, 0f);
+                                i++;
                             }
                         }
-
-                        
-
                         Debug.Log("tileId:" + tileId);
                     }
 
-
+                    var entity = state.EntityManager.CreateEntity();
+                    state.EntityManager.AddComponentData(entity, rock);
+                    rockId++;
                 }
                 rockTileIds.Dispose();
 
@@ -217,6 +219,7 @@ namespace AutoFarmers.Farm
 
     public struct Rock : IComponentData
     {
+        public int m_RockId;
         public float3 m_Center;
         public NativeArray<int> m_TileIds;
         public float m_Health;
