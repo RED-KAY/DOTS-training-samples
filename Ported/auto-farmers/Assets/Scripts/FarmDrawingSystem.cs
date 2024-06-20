@@ -87,6 +87,8 @@ namespace AutoFarmers.Farm
                 jobHandle.Complete();
 
                 int totalRocks = rocksTotalCountJob.m_Count.Value;
+                rocksTotalCountJob.m_Count.Dispose();
+                //Debug.Log("totalRocks = " + totalRocks);
                 m_Rocks = new Matrix4x4[(int)math.ceil((float)totalRocks / (float)m_InstancesPerBatch)][];
 
                 for (int i = 0; i < m_Rocks.Length; i++)
@@ -97,9 +99,11 @@ namespace AutoFarmers.Farm
                 r = c = 0;
                 foreach (var rock in SystemAPI.Query<RefRO<Rock>>())
                 {
-                    for (int i = 0; i < rock.ValueRO.m_TileIds.Length; i++)
+                    for (int i = 0; i < rock.ValueRO.m_BlobRef.Value.m_Rocks.Length; i++)
                     {
-                        m_Rocks[r][c] = Matrix4x4.TRS(new UnityEngine.Vector3(rock.ValueRO.m_Positions[i].x, rock.ValueRO.m_Positions[i].y, rock.ValueRO.m_Positions[i].z), Quaternion.identity, rock.ValueRO.m_Scale);
+                        Vector3 position = new Vector3(rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.x, rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.y, rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.z);
+                        //Debug.Log(position + ", " + rock.ValueRO.m_RockId);
+                        m_Rocks[r][c] = Matrix4x4.TRS(position, Quaternion.identity, Vector3.one);
 
                         if (c < m_FarmCells[r].Length - 1)
                         {
@@ -131,7 +135,7 @@ namespace AutoFarmers.Farm
                     Graphics.DrawMeshInstanced(m_Farm.m_GroundMesh, 0, m_Farm.m_GroundMaterial, m_FarmCells[i]);
                 }
 
-                for (int i = 0;i < m_Rocks.Length; i++)
+                for (int i = 0; i < m_Rocks.Length; i++)
                 {
                     Graphics.DrawMeshInstanced(m_Farm.m_RockMesh, 0, m_Farm.m_RockMaterial, m_Rocks[i]);
                 }
@@ -145,10 +149,7 @@ namespace AutoFarmers.Farm
         public NativeReference<int> m_Count;
         private void Execute(ref Rock rock)
         {
-            foreach (int i in rock.m_TileIds)
-            {
-                m_Count.Value++;
-            }
+            m_Count.Value += rock.m_BlobRef.Value.m_Rocks.Length;
         }
     }
 }

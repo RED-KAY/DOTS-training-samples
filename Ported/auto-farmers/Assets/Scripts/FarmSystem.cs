@@ -80,9 +80,26 @@ namespace AutoFarmers.Farm
                     int i = rockX + (index / height); 
                     int j = rockY + (index % height);
                     int tileId = i * m_Farm.m_Size.y + j;
-                    var jobHandle = GetTile(tileId, out GetTileJob getTileStatusJob, ref state);
+                    var getTileStatusJob = new GetTileJob()
+                    {
+                        m_TileIdToSearch = tileId,
+                        m_Handle = state.EntityManager.GetComponentTypeHandle<Tile>(true),
+                        m_Found = new NativeReference<bool>(Allocator.Domain),
+                        m_Status = new NativeReference<TileStatus>(Allocator.Domain),
+                        m_Tile = new NativeReference<Tile>(Allocator.Domain)
+                    };
+
+                    var entityQuery = state.GetEntityQuery(ComponentType.ReadOnly<Tile>());
+                    var jobHandle = getTileStatusJob.ScheduleParallel(entityQuery, state.Dependency);
+                    //var jobHandle = GetTile(tileId, out GetTileJob getTileStatusJob, ref state);
                     jobHandle.Complete();
-                    if (getTileStatusJob.m_Found.Value && getTileStatusJob.m_Status.Value == TileStatus.None)
+
+                    bool found = getTileStatusJob.m_Found.Value;
+                    TileStatus status = getTileStatusJob.m_Status.Value;
+                    getTileStatusJob.m_Found.Dispose();
+                    getTileStatusJob.m_Status.Dispose();
+                    getTileStatusJob.m_Tile.Dispose();
+                    if (found && status == TileStatus.None)
                     {
                         rockTileIds.Add(tileId);
                     }
@@ -91,17 +108,19 @@ namespace AutoFarmers.Farm
                         notValid = true;
                         break;
                     }
+
                 }
 
                 if (!notValid)
                 {
-                    Debug.Log(width + "X" + height + " - " + rockX + ", " + rockY + "rockIds: " + rockTileIds.Length);
                     var rock = new Rock {
                         m_RockId = rockId,
-                        m_TileIds = new NativeArray<int>(rockTileIds.Length, Allocator.Persistent),
-                        m_Positions = new NativeArray<float3>(rockTileIds.Length, Allocator.Persistent),
-                        m_Scale = new float3(1, 0.5f, 1)
+                        m_Scale = new float3(1, 0.5f, 1),
                     };
+
+                    var builder = new BlobBuilder(Allocator.Temp);
+                    ref PerRockInfoAsset perRockInfo = ref builder.ConstructRoot<PerRockInfoAsset>();
+                    BlobBuilderArray<PerRockInfo> arrayBuilder = builder.Allocate(ref perRockInfo.m_Rocks, rockTileIds.Length);
 
                     int i = 0;
                     //TODO: optimize these 2 loops!
@@ -114,14 +133,20 @@ namespace AutoFarmers.Farm
                         {
                             if(tile.ValueRO.m_Id == tileId)
                             {
-                                rock.m_TileIds[i] = tileId;
-                                rock.m_Positions[i] = tile.ValueRO.m_Position + new float3(0, 0.25f, 0f);
+                                arrayBuilder[i] = new PerRockInfo
+                                {
+                                    m_Position = tile.ValueRO.m_Position + new float3(0, 0.25f, 0f),
+                                    m_TileId = tileId
+                                };
+                                //Debug.Log("pos: " + arrayBuilder[i].m_Position + " tile: " + arrayBuilder[i].m_TileId);
                                 i++;
                             }
                         }
-                        Debug.Log("tileId:" + tileId);
+                        //Debug.Log("tileId:" + tileId);
                     }
 
+                    rock.m_BlobRef = builder.CreateBlobAssetReference<PerRockInfoAsset>(Allocator.Persistent);
+                    builder.Dispose();
                     var entity = state.EntityManager.CreateEntity();
                     state.EntityManager.AddComponentData(entity, rock);
                     rockId++;
@@ -131,6 +156,7 @@ namespace AutoFarmers.Farm
                 currentRockPercent = GetCurrentRockPercent(ref state);
             }
         }
+
 
         [BurstCompile]
         private JobHandle SetTileStatus(int targetTileId, TileStatus statusToSet, out SetTileStatusJob setTileJob, ref SystemState state)
@@ -146,23 +172,6 @@ namespace AutoFarmers.Farm
 
             //var handle = getTileJob.ScheduleParallel(state.EntityManager.CreateEntityQuery(typeof(Tile)), state.Dependency);
             var jobHandle = setTileJob.ScheduleParallel(entityQuery, state.Dependency);
-            return jobHandle;
-        }
-
-        [BurstCompile]
-        private JobHandle GetTile(int tileId, out GetTileJob getTileStatusJob, ref SystemState state)
-        {
-            getTileStatusJob = new GetTileJob()
-            {
-                m_TileIdToSearch = tileId,
-                m_Handle = state.EntityManager.GetComponentTypeHandle<Tile>(true),
-                m_Found = new NativeReference<bool>(Allocator.Persistent),
-                m_Status = new NativeReference<TileStatus>(Allocator.Persistent),
-                m_Tile = new NativeReference<Tile>(Allocator.Persistent)
-            };
-
-            var entityQuery = state.GetEntityQuery(ComponentType.ReadOnly<Tile>());
-            var jobHandle = getTileStatusJob.ScheduleParallel(entityQuery, state.Dependency);
             return jobHandle;
         }
 
@@ -216,16 +225,28 @@ namespace AutoFarmers.Farm
         Silo
     }
 
+    public struct PerRockInfo
+    {
+        public int m_TileId;
+        public float3 m_Position;
+    }
+
+    public struct PerRockInfoAsset
+    {
+        public BlobArray<PerRockInfo> m_Rocks;
+    }
 
     public struct Rock : IComponentData
     {
         public int m_RockId;
         public float3 m_Center;
-        public NativeArray<int> m_TileIds;
+        //public NativeArray<int> m_TileIds;
         public float m_Health;
-        public NativeArray<float3> m_Positions;
+        //public NativeArray<float3> m_Positions;
         public float3 m_Scale;
+        public BlobAssetReference<PerRockInfoAsset> m_BlobRef;
     }
+
 
     public struct Tile : IComponentData
     {

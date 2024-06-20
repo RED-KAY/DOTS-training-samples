@@ -16,7 +16,7 @@ namespace AutoFarmers.Tools
         {
             foreach (var entity in SystemAPI.Query<RefRO<Tile>>())
             {
-                Debug.Log("Tile[" + entity.ValueRO.m_Id + "]: " + entity.ValueRO.m_Status);
+                //Debug.Log("Tile[" + entity.ValueRO.m_Id + "]: " + entity.ValueRO.m_Status);
             }
         }
 
