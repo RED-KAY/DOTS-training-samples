@@ -18,6 +18,8 @@ namespace AutoFarmers.Farm
         public Mesh m_RockMesh;
         public Material m_RockMaterial;
 
+        public GameObject m_DebugTileId;
+
         public class FarmBaker : Baker<FarmAuthoring>
         {
             public override void Bake(FarmAuthoring authoring)
@@ -27,7 +29,8 @@ namespace AutoFarmers.Farm
                 AddComponent(entity, new Farm()
                 {
                     m_Size = authoring.m_Size,
-                    m_RockPercentage = authoring.m_RockPercentage
+                    m_RockPercentage = authoring.m_RockPercentage,
+                    m_DebugCanvas = GetEntity(authoring.m_DebugTileId, TransformUsageFlags.Dynamic)
                 });
 
                 AddSharedComponentManaged(entity, new FarmDrawing()
@@ -48,6 +51,7 @@ namespace AutoFarmers.Farm
     {
         public int2 m_Size;
         public float m_RockPercentage;
+        public Entity m_DebugCanvas;
     }
 
     public struct FarmDrawing : IEquatable<FarmDrawing>, ISharedComponentData 
@@ -60,6 +64,7 @@ namespace AutoFarmers.Farm
         public Mesh m_FarmerMesh;
         public Material m_FarmerMaterial;
 
+
         public bool Equals(FarmDrawing other)
         {
             return m_GroundMesh == other.m_GroundMesh &&
@@ -69,6 +74,7 @@ namespace AutoFarmers.Farm
                    m_RockMaterial == other.m_RockMaterial &&
                    m_FarmerMaterial == other.m_FarmerMaterial &&
                    m_FarmerMesh == other.m_FarmerMesh;
+                  
         }
 
         public override int GetHashCode()
@@ -81,6 +87,7 @@ namespace AutoFarmers.Farm
             hash = hash * 23 + (m_RockMesh != null ? m_RockMesh.GetHashCode() : 0);
             hash = hash * 23 + (m_FarmerMaterial != null ? m_FarmerMaterial.GetHashCode() : 0);
             hash = hash * 23 + (m_FarmerMesh != null ? m_FarmerMesh.GetHashCode() : 0);
+            //hash = hash * 23 + (m_DebugCanvas != null ? m_DebugCanvas.GetHashCode() : 0);
 
             return hash;
         }

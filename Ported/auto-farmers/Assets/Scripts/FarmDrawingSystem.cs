@@ -8,7 +8,7 @@ using Matrix4x4 = UnityEngine.Matrix4x4;
 
 namespace AutoFarmers.Farm
 {
-    [UpdateInGroup(typeof(PresentationSystemGroup)), UpdateAfter(typeof(FarmSystem))]
+    [UpdateInGroup(typeof(PresentationSystemGroup))]
     public partial class FarmDrawingSystem : SystemBase
     {
         private FarmDrawing m_Farm;

@@ -151,13 +151,15 @@ MonoBehaviour:
   m_Ground: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
   m_GroundMaterial: {fileID: 2100000, guid: a2a1ef6e0a02fb24ea3f8e087be74b22, type: 2}
   m_Size:
-    x: 6
-    y: 6
+    x: 20
+    y: 20
   m_RockPercentage: 40
   m_FarmerMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_FarmerMaterial: {fileID: 2100000, guid: 4fb67576865394a489ea8f3e9a7ab704, type: 2}
   m_RockMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_RockMaterial: {fileID: 2100000, guid: 7fbd300f858675245a97ee0b78c0d0dc, type: 2}
+  m_DebugTileId: {fileID: 3640146551794456422, guid: d34723038c1b8614098e85b02a05e3e5,
+    type: 3}
 --- !u!4 &1423099511
 Transform:
   m_ObjectHideFlags: 0
