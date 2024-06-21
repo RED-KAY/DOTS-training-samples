@@ -1,0 +1,694 @@
+Index,RecordType,FrameIndex,World,ExecutingSystem,OriginSystem,Entities,ComponentTypes,Data
+0,SetComponentData,117,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.02862423285842 DeltaTime=0.0224784}}]"
+1,GetBufferRW,117,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+2,SetComponentData,117,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.01666677184403 DeltaTime=0.01666667}}]"
+3,GetBufferRW,117,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+4,SetComponentData,117,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.02862423285842 DeltaTime=0.0224784}}]"
+5,GetBufferRW,117,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+6,SetComponentData,117,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=5.78974624723196 DeltaTime=0.0819206}}]"
+7,GetBufferRW,117,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+8,SetComponentData,117,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.02862423285842 DeltaTime=0.0224784}}]"
+9,GetBufferRW,118,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+10,SetComponentData,118,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.05012642964721 DeltaTime=0.0215022}}]"
+11,GetBufferRW,118,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+12,SetComponentData,118,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.03333343937993 DeltaTime=0.01666667}}]"
+13,GetBufferRW,118,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+14,SetComponentData,118,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.05012642964721 DeltaTime=0.0215022}}]"
+15,GetBufferRW,118,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+16,SetComponentData,118,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.05000010691583 DeltaTime=0.01666667}}]"
+17,GetBufferRW,118,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+18,SetComponentData,118,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.05012642964721 DeltaTime=0.0215022}}]"
+19,SetComponentData,119,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.06214033253491 DeltaTime=0.0120139}}]"
+20,SetComponentData,120,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.07845553196967 DeltaTime=0.0163152}}]"
+21,GetBufferRW,120,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+22,SetComponentData,120,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.06666677445173 DeltaTime=0.01666667}}]"
+23,GetBufferRW,120,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+24,SetComponentData,120,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.07845553196967 DeltaTime=0.0163152}}]"
+25,SetComponentData,121,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.08816163334996 DeltaTime=0.009706101}}]"
+26,GetBufferRW,121,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+27,SetComponentData,121,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.08333344198763 DeltaTime=0.01666667}}]"
+28,GetBufferRW,121,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+29,SetComponentData,121,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.08816163334996 DeltaTime=0.009706101}}]"
+30,SetComponentData,122,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.0985228298232 DeltaTime=0.0103612}}]"
+31,SetComponentData,123,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.11241423431784 DeltaTime=0.0138914}}]"
+32,GetBufferRW,123,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+33,SetComponentData,123,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.10000010952353 DeltaTime=0.01666667}}]"
+34,GetBufferRW,123,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+35,SetComponentData,123,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.11241423431784 DeltaTime=0.0138914}}]"
+36,GetBufferRW,123,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+37,SetComponentData,123,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=5.86847894638777 DeltaTime=0.0787327}}]"
+38,GetBufferRW,123,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+39,SetComponentData,123,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.11241423431784 DeltaTime=0.0138914}}]"
+40,SetComponentData,124,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.12511153426021 DeltaTime=0.0126973}}]"
+41,GetBufferRW,124,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+42,SetComponentData,124,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.11666677705944 DeltaTime=0.01666667}}]"
+43,GetBufferRW,124,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+44,SetComponentData,124,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.12511153426021 DeltaTime=0.0126973}}]"
+45,SetComponentData,125,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.13690363336354 DeltaTime=0.0117921}}]"
+46,GetBufferRW,125,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+47,SetComponentData,125,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.13333344459534 DeltaTime=0.01666667}}]"
+48,GetBufferRW,125,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+49,SetComponentData,125,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.13690363336354 DeltaTime=0.0117921}}]"
+50,SetComponentData,126,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.15081953443587 DeltaTime=0.0139159}}]"
+51,GetBufferRW,126,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+52,SetComponentData,126,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.15000011213124 DeltaTime=0.01666667}}]"
+53,GetBufferRW,126,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+54,SetComponentData,126,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.15081953443587 DeltaTime=0.0139159}}]"
+55,SetComponentData,127,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.15991222858429 DeltaTime=0.009092694}}]"
+56,SetComponentData,128,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.17105813324451 DeltaTime=0.0111459}}]"
+57,GetBufferRW,128,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+58,SetComponentData,128,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.16666677966714 DeltaTime=0.01666667}}]"
+59,GetBufferRW,128,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+60,SetComponentData,128,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.17105813324451 DeltaTime=0.0111459}}]"
+61,SetComponentData,129,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.18396212998778 DeltaTime=0.012904}}]"
+62,GetBufferRW,129,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+63,SetComponentData,129,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.18333344720304 DeltaTime=0.01666667}}]"
+64,GetBufferRW,129,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+65,SetComponentData,129,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.18396212998778 DeltaTime=0.012904}}]"
+66,GetBufferRW,129,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+67,SetComponentData,129,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=5.93991664797068 DeltaTime=0.0714377}}]"
+68,GetBufferRW,129,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+69,SetComponentData,129,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.18396212998778 DeltaTime=0.012904}}]"
+70,SetComponentData,130,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.19404853135347 DeltaTime=0.0100864}}]"
+71,GetBufferRW,131,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+72,SetComponentData,131,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.20786873437464 DeltaTime=0.0138202}}]"
+73,GetBufferRW,131,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+74,SetComponentData,131,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.20000011473894 DeltaTime=0.01666667}}]"
+75,GetBufferRW,131,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+76,SetComponentData,131,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.20786873437464 DeltaTime=0.0138202}}]"
+77,SetComponentData,132,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.22188023477793 DeltaTime=0.0140115}}]"
+78,GetBufferRW,132,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+79,SetComponentData,132,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.21666678227484 DeltaTime=0.01666667}}]"
+80,GetBufferRW,132,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+81,SetComponentData,132,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.22188023477793 DeltaTime=0.0140115}}]"
+82,SetComponentData,133,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.23142143338919 DeltaTime=0.009541199}}]"
+83,SetComponentData,134,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.24665453284979 DeltaTime=0.0152331}}]"
+84,GetBufferRW,134,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+85,SetComponentData,134,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.23333344981074 DeltaTime=0.01666667}}]"
+86,GetBufferRW,134,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+87,SetComponentData,134,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.24665453284979 DeltaTime=0.0152331}}]"
+88,SetComponentData,135,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.25577263068408 DeltaTime=0.009118098}}]"
+89,GetBufferRW,135,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+90,SetComponentData,135,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.25000011734664 DeltaTime=0.01666667}}]"
+91,GetBufferRW,135,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+92,SetComponentData,135,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.25577263068408 DeltaTime=0.009118098}}]"
+93,GetBufferRW,135,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+94,SetComponentData,135,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.01144074648619 DeltaTime=0.0715241}}]"
+95,GetBufferRW,135,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+96,SetComponentData,135,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.25577263068408 DeltaTime=0.009118098}}]"
+97,SetComponentData,136,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.26633203402162 DeltaTime=0.0105594}}]"
+98,SetComponentData,137,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.28012212738395 DeltaTime=0.01379009}}]"
+99,GetBufferRW,137,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+100,SetComponentData,137,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.26666678488255 DeltaTime=0.01666667}}]"
+101,GetBufferRW,137,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+102,SetComponentData,137,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.28012212738395 DeltaTime=0.01379009}}]"
+103,SetComponentData,138,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.28947503305972 DeltaTime=0.009352906}}]"
+104,GetBufferRW,138,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+105,SetComponentData,138,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.28333345241845 DeltaTime=0.01666667}}]"
+106,GetBufferRW,138,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+107,SetComponentData,138,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.28947503305972 DeltaTime=0.009352906}}]"
+108,SetComponentData,139,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.29826333373785 DeltaTime=0.008788301}}]"
+109,SetComponentData,140,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.31218282785267 DeltaTime=0.01391949}}]"
+110,GetBufferRW,140,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+111,SetComponentData,140,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.30000011995435 DeltaTime=0.01666667}}]"
+112,GetBufferRW,140,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+113,SetComponentData,140,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.31218282785267 DeltaTime=0.01391949}}]"
+114,SetComponentData,141,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.3217345289886 DeltaTime=0.009551701}}]"
+115,GetBufferRW,141,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+116,SetComponentData,141,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.31666678749025 DeltaTime=0.01666667}}]"
+117,GetBufferRW,141,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+118,SetComponentData,141,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.3217345289886 DeltaTime=0.009551701}}]"
+119,GetBufferRW,141,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+120,SetComponentData,141,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.07745154947042 DeltaTime=0.0660108}}]"
+121,GetBufferRW,141,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+122,SetComponentData,141,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.3217345289886 DeltaTime=0.009551701}}]"
+123,SetComponentData,142,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.3325783284381 DeltaTime=0.0108438}}]"
+124,SetComponentData,143,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.34665502887219 DeltaTime=0.0140767}}]"
+125,GetBufferRW,143,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+126,SetComponentData,143,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.33333345502615 DeltaTime=0.01666667}}]"
+127,GetBufferRW,143,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+128,SetComponentData,143,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.34665502887219 DeltaTime=0.0140767}}]"
+129,GetBufferRW,144,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+130,SetComponentData,144,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.35745433438569 DeltaTime=0.01079931}}]"
+131,GetBufferRW,144,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+132,SetComponentData,144,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.35000012256205 DeltaTime=0.01666667}}]"
+133,GetBufferRW,144,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+134,SetComponentData,144,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.35745433438569 DeltaTime=0.01079931}}]"
+135,SetComponentData,145,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.37473612930626 DeltaTime=0.01728179}}]"
+136,GetBufferRW,145,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+137,SetComponentData,145,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.36666679009795 DeltaTime=0.01666667}}]"
+138,GetBufferRW,145,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+139,SetComponentData,145,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.37473612930626 DeltaTime=0.01728179}}]"
+140,SetComponentData,146,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.38577673304826 DeltaTime=0.0110406}}]"
+141,GetBufferRW,146,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+142,SetComponentData,146,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.38333345763385 DeltaTime=0.01666667}}]"
+143,GetBufferRW,146,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+144,SetComponentData,146,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.38577673304826 DeltaTime=0.0110406}}]"
+145,SetComponentData,147,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.39555003214628 DeltaTime=0.009773299}}]"
+146,GetBufferRW,147,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+147,SetComponentData,147,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.15123154968023 DeltaTime=0.07378}}]"
+148,GetBufferRW,147,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+149,SetComponentData,147,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.39555003214628 DeltaTime=0.009773299}}]"
+150,SetComponentData,148,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.40876642987132 DeltaTime=0.0132164}}]"
+151,GetBufferRW,148,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+152,SetComponentData,148,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.40000012516975 DeltaTime=0.01666667}}]"
+153,GetBufferRW,148,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+154,SetComponentData,148,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.40876642987132 DeltaTime=0.0132164}}]"
+155,SetComponentData,149,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.41867153160274 DeltaTime=0.009905102}}]"
+156,GetBufferRW,149,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+157,SetComponentData,149,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.41666679270566 DeltaTime=0.01666667}}]"
+158,GetBufferRW,149,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+159,SetComponentData,149,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.41867153160274 DeltaTime=0.009905102}}]"
+160,SetComponentData,150,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.42792843375355 DeltaTime=0.009256902}}]"
+161,SetComponentData,151,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.44337992928922 DeltaTime=0.0154515}}]"
+162,GetBufferRW,151,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+163,SetComponentData,151,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.43333346024156 DeltaTime=0.01666667}}]"
+164,GetBufferRW,151,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+165,SetComponentData,151,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.44337992928922 DeltaTime=0.0154515}}]"
+166,SetComponentData,152,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.45636713132262 DeltaTime=0.0129872}}]"
+167,GetBufferRW,152,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+168,SetComponentData,152,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.45000012777746 DeltaTime=0.01666667}}]"
+169,GetBufferRW,152,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+170,SetComponentData,152,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.45636713132262 DeltaTime=0.0129872}}]"
+171,SetComponentData,153,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.46604673005641 DeltaTime=0.009679599}}]"
+172,GetBufferRW,153,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+173,SetComponentData,153,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.22197204828262 DeltaTime=0.0707405}}]"
+174,GetBufferRW,153,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+175,SetComponentData,153,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.46604673005641 DeltaTime=0.009679599}}]"
+176,SetComponentData,154,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.47971593402326 DeltaTime=0.0136692}}]"
+177,GetBufferRW,154,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+178,SetComponentData,154,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.46666679531336 DeltaTime=0.01666667}}]"
+179,GetBufferRW,154,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+180,SetComponentData,154,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.47971593402326 DeltaTime=0.0136692}}]"
+181,SetComponentData,155,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.48999113216996 DeltaTime=0.0102752}}]"
+182,GetBufferRW,155,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+183,SetComponentData,155,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.48333346284926 DeltaTime=0.01666667}}]"
+184,GetBufferRW,155,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+185,SetComponentData,155,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.48999113216996 DeltaTime=0.0102752}}]"
+186,SetComponentData,156,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.49872452951968 DeltaTime=0.008733397}}]"
+187,GetBufferRW,157,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+188,SetComponentData,157,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.51248233113438 DeltaTime=0.0137578}}]"
+189,GetBufferRW,157,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+190,SetComponentData,157,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.50000013038516 DeltaTime=0.01666667}}]"
+191,GetBufferRW,157,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+192,SetComponentData,157,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.51248233113438 DeltaTime=0.0137578}}]"
+193,SetComponentData,158,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.52679762989283 DeltaTime=0.0143153}}]"
+194,GetBufferRW,158,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+195,SetComponentData,158,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.51666679792106 DeltaTime=0.01666667}}]"
+196,GetBufferRW,158,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+197,SetComponentData,158,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.52679762989283 DeltaTime=0.0143153}}]"
+198,SetComponentData,159,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.54105073399842 DeltaTime=0.0142531}}]"
+199,GetBufferRW,159,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+200,SetComponentData,159,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.53333346545696 DeltaTime=0.01666667}}]"
+201,GetBufferRW,159,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+202,SetComponentData,159,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.54105073399842 DeltaTime=0.0142531}}]"
+203,GetBufferRW,159,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+204,SetComponentData,159,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.29677645117044 DeltaTime=0.0748044}}]"
+205,GetBufferRW,159,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+206,SetComponentData,159,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.54105073399842 DeltaTime=0.0142531}}]"
+207,SetComponentData,160,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.55223393253982 DeltaTime=0.0111832}}]"
+208,GetBufferRW,160,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+209,SetComponentData,160,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.55000013299286 DeltaTime=0.01666667}}]"
+210,GetBufferRW,160,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+211,SetComponentData,160,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.55223393253982 DeltaTime=0.0111832}}]"
+212,SetComponentData,161,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.5617830324918 DeltaTime=0.0095491}}]"
+213,SetComponentData,162,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.57644532714039 DeltaTime=0.01466229}}]"
+214,GetBufferRW,162,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+215,SetComponentData,162,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.56666680052876 DeltaTime=0.01666667}}]"
+216,GetBufferRW,162,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+217,SetComponentData,162,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.57644532714039 DeltaTime=0.01466229}}]"
+218,SetComponentData,163,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.58800813183188 DeltaTime=0.0115628}}]"
+219,GetBufferRW,163,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+220,SetComponentData,163,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.58333346806467 DeltaTime=0.01666667}}]"
+221,GetBufferRW,163,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+222,SetComponentData,163,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.58800813183188 DeltaTime=0.0115628}}]"
+223,SetComponentData,164,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.59983372688293 DeltaTime=0.0118256}}]"
+224,SetComponentData,165,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.61486323364079 DeltaTime=0.01502951}}]"
+225,GetBufferRW,165,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+226,SetComponentData,165,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.60000013560057 DeltaTime=0.01666667}}]"
+227,GetBufferRW,165,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+228,SetComponentData,165,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.61486323364079 DeltaTime=0.01502951}}]"
+229,GetBufferRW,165,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+230,SetComponentData,165,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.3705343529582 DeltaTime=0.0737579}}]"
+231,GetBufferRW,165,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+232,SetComponentData,165,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.61486323364079 DeltaTime=0.01502951}}]"
+233,SetComponentData,166,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.6254849312827 DeltaTime=0.0106217}}]"
+234,GetBufferRW,166,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+235,SetComponentData,166,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.61666680313647 DeltaTime=0.01666667}}]"
+236,GetBufferRW,166,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+237,SetComponentData,166,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.6254849312827 DeltaTime=0.0106217}}]"
+238,SetComponentData,167,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.63789342716336 DeltaTime=0.0124085}}]"
+239,GetBufferRW,167,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+240,SetComponentData,167,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.63333347067237 DeltaTime=0.01666667}}]"
+241,GetBufferRW,167,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+242,SetComponentData,167,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.63789342716336 DeltaTime=0.0124085}}]"
+243,SetComponentData,168,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.65233743190765 DeltaTime=0.014444}}]"
+244,GetBufferRW,168,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+245,SetComponentData,168,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.65000013820827 DeltaTime=0.01666667}}]"
+246,GetBufferRW,168,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+247,SetComponentData,168,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.65233743190765 DeltaTime=0.014444}}]"
+248,GetBufferRW,169,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+249,SetComponentData,169,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.66446783114225 DeltaTime=0.0121304}}]"
+250,SetComponentData,170,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.68215782474726 DeltaTime=0.01768999}}]"
+251,GetBufferRW,170,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+252,SetComponentData,170,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.66666680574417 DeltaTime=0.01666667}}]"
+253,GetBufferRW,170,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+254,SetComponentData,170,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.68215782474726 DeltaTime=0.01768999}}]"
+255,GetBufferRW,170,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+256,SetComponentData,170,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.4382690563798 DeltaTime=0.0677347}}]"
+257,GetBufferRW,170,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+258,SetComponentData,170,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.68215782474726 DeltaTime=0.01768999}}]"
+259,SetComponentData,171,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.69243483059108 DeltaTime=0.01027701}}]"
+260,GetBufferRW,171,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+261,SetComponentData,171,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.68333347328007 DeltaTime=0.01666667}}]"
+262,GetBufferRW,171,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+263,SetComponentData,171,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.69243483059108 DeltaTime=0.01027701}}]"
+264,SetComponentData,172,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.70848303101957 DeltaTime=0.0160482}}]"
+265,GetBufferRW,172,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+266,SetComponentData,172,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.70000014081597 DeltaTime=0.01666667}}]"
+267,GetBufferRW,172,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+268,SetComponentData,172,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.70848303101957 DeltaTime=0.0160482}}]"
+269,SetComponentData,173,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.7191989319399 DeltaTime=0.0107159}}]"
+270,GetBufferRW,173,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+271,SetComponentData,173,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.71666680835187 DeltaTime=0.01666667}}]"
+272,GetBufferRW,173,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+273,SetComponentData,173,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.7191989319399 DeltaTime=0.0107159}}]"
+274,SetComponentData,174,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.73151773121208 DeltaTime=0.0123188}}]"
+275,SetComponentData,175,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.74793492909521 DeltaTime=0.0164172}}]"
+276,GetBufferRW,175,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+277,SetComponentData,175,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.73333347588778 DeltaTime=0.01666667}}]"
+278,GetBufferRW,175,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+279,SetComponentData,175,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.74793492909521 DeltaTime=0.0164172}}]"
+280,SetComponentData,176,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.75752212479711 DeltaTime=0.009587196}}]"
+281,GetBufferRW,176,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+282,SetComponentData,176,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.75000014342368 DeltaTime=0.01666667}}]"
+283,GetBufferRW,176,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+284,SetComponentData,176,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.75752212479711 DeltaTime=0.009587196}}]"
+285,GetBufferRW,176,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+286,SetComponentData,176,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.51320015639067 DeltaTime=0.0749311}}]"
+287,GetBufferRW,176,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+288,SetComponentData,176,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.75752212479711 DeltaTime=0.009587196}}]"
+289,SetComponentData,177,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.76993602793664 DeltaTime=0.0124139}}]"
+290,GetBufferRW,177,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+291,SetComponentData,177,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.76666681095958 DeltaTime=0.01666667}}]"
+292,GetBufferRW,177,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+293,SetComponentData,177,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.76993602793664 DeltaTime=0.0124139}}]"
+294,SetComponentData,178,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.78365042712539 DeltaTime=0.0137144}}]"
+295,GetBufferRW,178,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+296,SetComponentData,178,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.78333347849548 DeltaTime=0.01666667}}]"
+297,GetBufferRW,178,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+298,SetComponentData,178,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.78365042712539 DeltaTime=0.0137144}}]"
+299,SetComponentData,179,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.79635692480952 DeltaTime=0.0127065}}]"
+300,SetComponentData,180,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.81084252614528 DeltaTime=0.0144856}}]"
+301,GetBufferRW,180,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+302,SetComponentData,180,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.80000014603138 DeltaTime=0.01666667}}]"
+303,GetBufferRW,180,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+304,SetComponentData,180,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.81084252614528 DeltaTime=0.0144856}}]"
+305,SetComponentData,181,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.82114682719111 DeltaTime=0.0103043}}]"
+306,GetBufferRW,181,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+307,SetComponentData,181,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.81666681356728 DeltaTime=0.01666667}}]"
+308,GetBufferRW,181,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+309,SetComponentData,181,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.82114682719111 DeltaTime=0.0103043}}]"
+310,GetBufferRW,182,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+311,SetComponentData,182,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.83149942755699 DeltaTime=0.0103526}}]"
+312,GetBufferRW,182,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+313,SetComponentData,182,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.58710905909538 DeltaTime=0.0739089}}]"
+314,GetBufferRW,182,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+315,SetComponentData,182,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.83149942755699 DeltaTime=0.0103526}}]"
+316,SetComponentData,183,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.85240042582154 DeltaTime=0.020901}}]"
+317,GetBufferRW,183,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+318,SetComponentData,183,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.83333348110318 DeltaTime=0.01666667}}]"
+319,GetBufferRW,183,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+320,SetComponentData,183,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.85240042582154 DeltaTime=0.020901}}]"
+321,GetBufferRW,183,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+322,SetComponentData,183,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.85000014863908 DeltaTime=0.01666667}}]"
+323,GetBufferRW,183,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+324,SetComponentData,183,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.85240042582154 DeltaTime=0.020901}}]"
+325,SetComponentData,184,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.86176872905344 DeltaTime=0.009368303}}]"
+326,SetComponentData,185,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.87573142722249 DeltaTime=0.0139627}}]"
+327,GetBufferRW,185,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+328,SetComponentData,185,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.86666681617498 DeltaTime=0.01666667}}]"
+329,GetBufferRW,185,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+330,SetComponentData,185,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.87573142722249 DeltaTime=0.0139627}}]"
+331,SetComponentData,186,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.88700922671705 DeltaTime=0.0112778}}]"
+332,GetBufferRW,186,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+333,SetComponentData,186,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.88333348371089 DeltaTime=0.01666667}}]"
+334,GetBufferRW,186,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+335,SetComponentData,186,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.88700922671705 DeltaTime=0.0112778}}]"
+336,SetComponentData,187,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.90038293041289 DeltaTime=0.0133737}}]"
+337,GetBufferRW,187,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+338,SetComponentData,187,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.90000015124679 DeltaTime=0.01666667}}]"
+339,GetBufferRW,187,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+340,SetComponentData,187,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.90038293041289 DeltaTime=0.0133737}}]"
+341,GetBufferRW,187,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+342,SetComponentData,187,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.6562739610672 DeltaTime=0.0691649}}]"
+343,GetBufferRW,187,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+344,SetComponentData,187,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.90038293041289 DeltaTime=0.0133737}}]"
+345,SetComponentData,188,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.91483582835644 DeltaTime=0.0144529}}]"
+346,SetComponentData,189,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.92873472999781 DeltaTime=0.0138989}}]"
+347,GetBufferRW,189,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+348,SetComponentData,189,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.91666681878269 DeltaTime=0.01666667}}]"
+349,GetBufferRW,189,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+350,SetComponentData,189,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.92873472999781 DeltaTime=0.0138989}}]"
+351,SetComponentData,190,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.94577843043953 DeltaTime=0.0170437}}]"
+352,GetBufferRW,190,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+353,SetComponentData,190,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.93333348631859 DeltaTime=0.01666667}}]"
+354,GetBufferRW,190,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+355,SetComponentData,190,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.94577843043953 DeltaTime=0.0170437}}]"
+356,SetComponentData,191,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.9557834258303 DeltaTime=0.010005}}]"
+357,GetBufferRW,191,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+358,SetComponentData,191,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.95000015385449 DeltaTime=0.01666667}}]"
+359,GetBufferRW,191,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+360,SetComponentData,191,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.9557834258303 DeltaTime=0.010005}}]"
+361,SetComponentData,192,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.96506832540035 DeltaTime=0.0092849}}]"
+362,SetComponentData,193,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.97828332707286 DeltaTime=0.013215}}]"
+363,GetBufferRW,193,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+364,SetComponentData,193,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.96666682139039 DeltaTime=0.01666667}}]"
+365,GetBufferRW,193,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+366,SetComponentData,193,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.97828332707286 DeltaTime=0.013215}}]"
+367,GetBufferRW,193,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+368,SetComponentData,193,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.73470775783062 DeltaTime=0.0784338}}]"
+369,GetBufferRW,193,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+370,SetComponentData,193,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.97828332707286 DeltaTime=0.013215}}]"
+371,GetBufferRW,194,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+372,SetComponentData,194,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.98998532537371 DeltaTime=0.011702}}]"
+373,GetBufferRW,194,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+374,SetComponentData,194,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.98333348892629 DeltaTime=0.01666667}}]"
+375,GetBufferRW,194,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+376,SetComponentData,194,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=2.98998532537371 DeltaTime=0.011702}}]"
+377,SetComponentData,195,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.00082902610302 DeltaTime=0.0108437}}]"
+378,GetBufferRW,195,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+379,SetComponentData,195,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.00000015646219 DeltaTime=0.01666667}}]"
+380,GetBufferRW,195,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+381,SetComponentData,195,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.00082902610302 DeltaTime=0.0108437}}]"
+382,SetComponentData,196,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.01440452877432 DeltaTime=0.0135755}}]"
+383,SetComponentData,197,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.0244232295081 DeltaTime=0.0100187}}]"
+384,GetBufferRW,197,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+385,SetComponentData,197,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.01666682399809 DeltaTime=0.01666667}}]"
+386,GetBufferRW,197,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+387,SetComponentData,197,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.0244232295081 DeltaTime=0.0100187}}]"
+388,SetComponentData,198,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.03966292645782 DeltaTime=0.0152397}}]"
+389,GetBufferRW,198,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+390,SetComponentData,198,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.03333349153399 DeltaTime=0.01666667}}]"
+391,GetBufferRW,198,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+392,SetComponentData,198,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.03966292645782 DeltaTime=0.0152397}}]"
+393,SetComponentData,199,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.05008402932435 DeltaTime=0.0104211}}]"
+394,GetBufferRW,199,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+395,SetComponentData,199,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.0500001590699 DeltaTime=0.01666667}}]"
+396,GetBufferRW,199,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+397,SetComponentData,199,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.05008402932435 DeltaTime=0.0104211}}]"
+398,GetBufferRW,199,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+399,SetComponentData,199,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.8058118596673 DeltaTime=0.0711041}}]"
+400,GetBufferRW,199,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+401,SetComponentData,199,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.05008402932435 DeltaTime=0.0104211}}]"
+402,SetComponentData,200,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.05991243105382 DeltaTime=0.009828402}}]"
+403,SetComponentData,201,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.07202522829175 DeltaTime=0.0121128}}]"
+404,GetBufferRW,201,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+405,SetComponentData,201,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.0666668266058 DeltaTime=0.01666667}}]"
+406,GetBufferRW,201,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+407,SetComponentData,201,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.07202522829175 DeltaTime=0.0121128}}]"
+408,SetComponentData,202,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.08281163033098 DeltaTime=0.0107864}}]"
+409,SetComponentData,203,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.09182843193412 DeltaTime=0.009016802}}]"
+410,GetBufferRW,203,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+411,SetComponentData,203,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.0833334941417 DeltaTime=0.01666667}}]"
+412,GetBufferRW,203,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+413,SetComponentData,203,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.09182843193412 DeltaTime=0.009016802}}]"
+414,SetComponentData,204,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.10315893124789 DeltaTime=0.0113305}}]"
+415,GetBufferRW,204,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+416,SetComponentData,204,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.1000001616776 DeltaTime=0.01666667}}]"
+417,GetBufferRW,204,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+418,SetComponentData,204,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.10315893124789 DeltaTime=0.0113305}}]"
+419,SetComponentData,205,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.1154016321525 DeltaTime=0.0122427}}]"
+420,SetComponentData,206,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.12547812703997 DeltaTime=0.01007649}}]"
+421,GetBufferRW,206,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+422,SetComponentData,206,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.1166668292135 DeltaTime=0.01666667}}]"
+423,GetBufferRW,206,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+424,SetComponentData,206,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.12547812703997 DeltaTime=0.01007649}}]"
+425,GetBufferRW,206,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+426,SetComponentData,206,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.88132715970278 DeltaTime=0.0755153}}]"
+427,GetBufferRW,206,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+428,SetComponentData,206,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.12547812703997 DeltaTime=0.01007649}}]"
+429,SetComponentData,207,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.13558682892472 DeltaTime=0.0101087}}]"
+430,GetBufferRW,207,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+431,SetComponentData,207,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.1333334967494 DeltaTime=0.01666667}}]"
+432,GetBufferRW,207,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+433,SetComponentData,207,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.13558682892472 DeltaTime=0.0101087}}]"
+434,GetBufferRW,208,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+435,SetComponentData,208,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.15070302784443 DeltaTime=0.0151162}}]"
+436,GetBufferRW,208,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+437,SetComponentData,208,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.1500001642853 DeltaTime=0.01666667}}]"
+438,GetBufferRW,208,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+439,SetComponentData,208,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.15070302784443 DeltaTime=0.0151162}}]"
+440,SetComponentData,209,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.16211603116244 DeltaTime=0.011413}}]"
+441,SetComponentData,210,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.17359392903745 DeltaTime=0.0114779}}]"
+442,GetBufferRW,210,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+443,SetComponentData,210,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.1666668318212 DeltaTime=0.01666667}}]"
+444,GetBufferRW,210,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+445,SetComponentData,210,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.17359392903745 DeltaTime=0.0114779}}]"
+446,SetComponentData,211,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.18459022976458 DeltaTime=0.0109963}}]"
+447,GetBufferRW,211,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+448,SetComponentData,211,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.1833334993571 DeltaTime=0.01666667}}]"
+449,GetBufferRW,211,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+450,SetComponentData,211,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.18459022976458 DeltaTime=0.0109963}}]"
+451,SetComponentData,212,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.19460852630436 DeltaTime=0.0100183}}]"
+452,GetBufferRW,212,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+453,SetComponentData,212,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=6.95070966333151 DeltaTime=0.0693825}}]"
+454,GetBufferRW,212,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+455,SetComponentData,212,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.19460852630436 DeltaTime=0.0100183}}]"
+456,SetComponentData,213,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.20877822581679 DeltaTime=0.0141697}}]"
+457,GetBufferRW,213,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+458,SetComponentData,213,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.20000016689301 DeltaTime=0.01666667}}]"
+459,GetBufferRW,213,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+460,SetComponentData,213,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.20877822581679 DeltaTime=0.0141697}}]"
+461,SetComponentData,214,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.22165512479842 DeltaTime=0.0128769}}]"
+462,GetBufferRW,214,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+463,SetComponentData,214,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.21666683442891 DeltaTime=0.01666667}}]"
+464,GetBufferRW,214,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+465,SetComponentData,214,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.22165512479842 DeltaTime=0.0128769}}]"
+466,SetComponentData,215,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.23537982720882 DeltaTime=0.0137247}}]"
+467,GetBufferRW,215,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+468,SetComponentData,215,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.23333350196481 DeltaTime=0.01666667}}]"
+469,GetBufferRW,215,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+470,SetComponentData,215,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.23537982720882 DeltaTime=0.0137247}}]"
+471,SetComponentData,216,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.24596942495555 DeltaTime=0.0105896}}]"
+472,SetComponentData,217,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.25539612583816 DeltaTime=0.009426701}}]"
+473,GetBufferRW,217,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+474,SetComponentData,217,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.25000016950071 DeltaTime=0.01666667}}]"
+475,GetBufferRW,217,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+476,SetComponentData,217,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.25539612583816 DeltaTime=0.009426701}}]"
+477,SetComponentData,218,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.26584283076227 DeltaTime=0.0104467}}]"
+478,GetBufferRW,218,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+479,SetComponentData,218,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=7.02165746688843 DeltaTime=0.0709478}}]"
+480,GetBufferRW,218,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+481,SetComponentData,218,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.26584283076227 DeltaTime=0.0104467}}]"
+482,SetComponentData,219,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.28031053207815 DeltaTime=0.0144677}}]"
+483,GetBufferRW,219,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+484,SetComponentData,219,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.26666683703661 DeltaTime=0.01666667}}]"
+485,GetBufferRW,219,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+486,SetComponentData,219,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.28031053207815 DeltaTime=0.0144677}}]"
+487,SetComponentData,220,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.28941082954407 DeltaTime=0.009100297}}]"
+488,GetBufferRW,220,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+489,SetComponentData,220,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.28333350457251 DeltaTime=0.01666667}}]"
+490,GetBufferRW,220,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+491,SetComponentData,220,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.28941082954407 DeltaTime=0.009100297}}]"
+492,GetBufferRW,221,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+493,SetComponentData,221,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.30121333058923 DeltaTime=0.0118025}}]"
+494,GetBufferRW,221,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+495,SetComponentData,221,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.30000017210841 DeltaTime=0.01666667}}]"
+496,GetBufferRW,221,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+497,SetComponentData,221,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.30121333058923 DeltaTime=0.0118025}}]"
+498,SetComponentData,222,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.31612472515553 DeltaTime=0.01491139}}]"
+499,SetComponentData,223,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.32469312753528 DeltaTime=0.008568402}}]"
+500,GetBufferRW,223,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+501,SetComponentData,223,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.31666683964431 DeltaTime=0.01666667}}]"
+502,GetBufferRW,223,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+503,SetComponentData,223,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.32469312753528 DeltaTime=0.008568402}}]"
+504,SetComponentData,224,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.33497892692685 DeltaTime=0.0102858}}]"
+505,GetBufferRW,224,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+506,SetComponentData,224,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.33333350718021 DeltaTime=0.01666667}}]"
+507,GetBufferRW,224,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+508,SetComponentData,224,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.33497892692685 DeltaTime=0.0102858}}]"
+509,GetBufferRW,224,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+510,SetComponentData,224,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=7.09111026674509 DeltaTime=0.0694528}}]"
+511,GetBufferRW,224,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+512,SetComponentData,224,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.33497892692685 DeltaTime=0.0102858}}]"
+513,SetComponentData,225,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.34835592564195 DeltaTime=0.013377}}]"
+514,SetComponentData,226,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.35904373042285 DeltaTime=0.0106878}}]"
+515,GetBufferRW,226,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+516,SetComponentData,226,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.35000017471611 DeltaTime=0.01666667}}]"
+517,GetBufferRW,226,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+518,SetComponentData,226,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.35904373042285 DeltaTime=0.0106878}}]"
+519,SetComponentData,227,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.36935222707689 DeltaTime=0.0103085}}]"
+520,GetBufferRW,227,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+521,SetComponentData,227,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.36666684225202 DeltaTime=0.01666667}}]"
+522,GetBufferRW,227,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+523,SetComponentData,227,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.36935222707689 DeltaTime=0.0103085}}]"
+524,SetComponentData,228,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.38217182736844 DeltaTime=0.0128196}}]"
+525,SetComponentData,229,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.39321092888713 DeltaTime=0.0110391}}]"
+526,GetBufferRW,229,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+527,SetComponentData,229,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.38333350978792 DeltaTime=0.01666667}}]"
+528,GetBufferRW,229,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+529,SetComponentData,229,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.39321092888713 DeltaTime=0.0110391}}]"
+530,SetComponentData,230,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.40862872917205 DeltaTime=0.0154178}}]"
+531,GetBufferRW,230,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+532,SetComponentData,230,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.40000017732382 DeltaTime=0.01666667}}]"
+533,GetBufferRW,230,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+534,SetComponentData,230,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.40862872917205 DeltaTime=0.0154178}}]"
+535,GetBufferRW,230,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+536,SetComponentData,230,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=7.1643990650773 DeltaTime=0.0732888}}]"
+537,GetBufferRW,230,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+538,SetComponentData,230,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.40862872917205 DeltaTime=0.0154178}}]"
+539,SetComponentData,231,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.41756002884358 DeltaTime=0.0089313}}]"
+540,GetBufferRW,231,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+541,SetComponentData,231,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.41666684485972 DeltaTime=0.01666667}}]"
+542,GetBufferRW,231,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+543,SetComponentData,231,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.41756002884358 DeltaTime=0.0089313}}]"
+544,SetComponentData,232,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.42815492674708 DeltaTime=0.0105949}}]"
+545,SetComponentData,233,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.44030692521483 DeltaTime=0.012152}}]"
+546,GetBufferRW,233,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+547,SetComponentData,233,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.43333351239562 DeltaTime=0.01666667}}]"
+548,GetBufferRW,233,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+549,SetComponentData,233,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.44030692521483 DeltaTime=0.012152}}]"
+550,SetComponentData,234,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.44882593024522 DeltaTime=0.008519005}}]"
+551,GetBufferRW,235,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+552,SetComponentData,235,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.45712342858315 DeltaTime=0.008297498}}]"
+553,GetBufferRW,235,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+554,SetComponentData,235,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.45000017993152 DeltaTime=0.01666667}}]"
+555,GetBufferRW,235,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+556,SetComponentData,235,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.45712342858315 DeltaTime=0.008297498}}]"
+557,SetComponentData,236,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.47218612674624 DeltaTime=0.0150627}}]"
+558,GetBufferRW,236,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+559,SetComponentData,236,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.46666684746742 DeltaTime=0.01666667}}]"
+560,GetBufferRW,236,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+561,SetComponentData,236,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.47218612674624 DeltaTime=0.0150627}}]"
+562,SetComponentData,237,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.48281932529062 DeltaTime=0.0106332}}]"
+563,GetBufferRW,237,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+564,SetComponentData,237,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=7.23844376206398 DeltaTime=0.0740447}}]"
+565,GetBufferRW,237,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+566,SetComponentData,237,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.48281932529062 DeltaTime=0.0106332}}]"
+567,SetComponentData,238,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.49180973041803 DeltaTime=0.008990405}}]"
+568,GetBufferRW,238,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+569,SetComponentData,238,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.48333351500332 DeltaTime=0.01666667}}]"
+570,GetBufferRW,238,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+571,SetComponentData,238,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.49180973041803 DeltaTime=0.008990405}}]"
+572,SetComponentData,239,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.50727102532983 DeltaTime=0.01546129}}]"
+573,GetBufferRW,239,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+574,SetComponentData,239,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.50000018253922 DeltaTime=0.01666667}}]"
+575,GetBufferRW,239,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+576,SetComponentData,239,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.50727102532983 DeltaTime=0.01546129}}]"
+577,SetComponentData,240,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.5170682258904 DeltaTime=0.009797201}}]"
+578,GetBufferRW,240,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+579,SetComponentData,240,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.51666685007513 DeltaTime=0.01666667}}]"
+580,GetBufferRW,240,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+581,SetComponentData,240,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.5170682258904 DeltaTime=0.009797201}}]"
+582,SetComponentData,241,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.52628052793443 DeltaTime=0.009212302}}]"
+583,SetComponentData,242,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.53683082573116 DeltaTime=0.0105503}}]"
+584,GetBufferRW,242,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+585,SetComponentData,242,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.53333351761103 DeltaTime=0.01666667}}]"
+586,GetBufferRW,242,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+587,SetComponentData,242,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.53683082573116 DeltaTime=0.0105503}}]"
+588,SetComponentData,243,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.54967432748526 DeltaTime=0.0128435}}]"
+589,GetBufferRW,243,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+590,SetComponentData,243,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=7.30557726323605 DeltaTime=0.0671335}}]"
+591,GetBufferRW,243,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+592,SetComponentData,243,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.54967432748526 DeltaTime=0.0128435}}]"
+593,SetComponentData,244,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.55992112495005 DeltaTime=0.0102468}}]"
+594,GetBufferRW,244,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+595,SetComponentData,244,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.55000018514693 DeltaTime=0.01666667}}]"
+596,GetBufferRW,244,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+597,SetComponentData,244,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.55992112495005 DeltaTime=0.0102468}}]"
+598,SetComponentData,245,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.57180232554674 DeltaTime=0.0118812}}]"
+599,GetBufferRW,245,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+600,SetComponentData,245,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.56666685268283 DeltaTime=0.01666667}}]"
+601,GetBufferRW,245,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+602,SetComponentData,245,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.57180232554674 DeltaTime=0.0118812}}]"
+603,SetComponentData,246,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.58353012427688 DeltaTime=0.0117278}}]"
+604,GetBufferRW,246,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+605,SetComponentData,246,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.58333352021873 DeltaTime=0.01666667}}]"
+606,GetBufferRW,246,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+607,SetComponentData,246,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.58353012427688 DeltaTime=0.0117278}}]"
+608,SetComponentData,247,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.59340472705662 DeltaTime=0.009874603}}]"
+609,SetComponentData,248,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.60458172578365 DeltaTime=0.011177}}]"
+610,GetBufferRW,248,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+611,SetComponentData,248,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.60000018775463 DeltaTime=0.01666667}}]"
+612,GetBufferRW,248,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+613,SetComponentData,248,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.60458172578365 DeltaTime=0.011177}}]"
+614,GetBufferRW,249,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+615,SetComponentData,249,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.61720073129982 DeltaTime=0.01261901}}]"
+616,GetBufferRW,249,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+617,SetComponentData,249,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.61666685529053 DeltaTime=0.01666667}}]"
+618,GetBufferRW,249,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+619,SetComponentData,249,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.61720073129982 DeltaTime=0.01261901}}]"
+620,GetBufferRW,249,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+621,SetComponentData,249,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=7.37301126122475 DeltaTime=0.067434}}]"
+622,GetBufferRW,249,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+623,SetComponentData,249,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.61720073129982 DeltaTime=0.01261901}}]"
+624,SetComponentData,250,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.62934633065015 DeltaTime=0.0121456}}]"
+625,SetComponentData,251,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.6413222309202 DeltaTime=0.0119759}}]"
+626,GetBufferRW,251,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+627,SetComponentData,251,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.63333352282643 DeltaTime=0.01666667}}]"
+628,GetBufferRW,251,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+629,SetComponentData,251,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.6413222309202 DeltaTime=0.0119759}}]"
+630,SetComponentData,252,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.65352992620319 DeltaTime=0.0122077}}]"
+631,GetBufferRW,252,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+632,SetComponentData,252,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.65000019036233 DeltaTime=0.01666667}}]"
+633,GetBufferRW,252,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+634,SetComponentData,252,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.65352992620319 DeltaTime=0.0122077}}]"
+635,SetComponentData,253,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.66226962953806 DeltaTime=0.008739703}}]"
+636,SetComponentData,254,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.67266603000462 DeltaTime=0.0103964}}]"
+637,GetBufferRW,254,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+638,SetComponentData,254,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.66666685789824 DeltaTime=0.01666667}}]"
+639,GetBufferRW,254,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+640,SetComponentData,254,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.67266603000462 DeltaTime=0.0103964}}]"
+641,SetComponentData,255,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.6854216279462 DeltaTime=0.0127556}}]"
+642,GetBufferRW,255,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+643,SetComponentData,255,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.68333352543414 DeltaTime=0.01666667}}]"
+644,GetBufferRW,255,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+645,SetComponentData,255,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.6854216279462 DeltaTime=0.0127556}}]"
+646,GetBufferRW,255,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+647,SetComponentData,255,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=7.44112455844879 DeltaTime=0.0681133}}]"
+648,GetBufferRW,255,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+649,SetComponentData,255,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.6854216279462 DeltaTime=0.0127556}}]"
+650,SetComponentData,256,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.69589062593877 DeltaTime=0.010469}}]"
+651,SetComponentData,257,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.70936413109303 DeltaTime=0.01347351}}]"
+652,GetBufferRW,257,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+653,SetComponentData,257,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.70000019297004 DeltaTime=0.01666667}}]"
+654,GetBufferRW,257,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+655,SetComponentData,257,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.70936413109303 DeltaTime=0.01347351}}]"
+656,SetComponentData,258,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.71990772522986 DeltaTime=0.01054359}}]"
+657,GetBufferRW,258,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+658,SetComponentData,258,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.71666686050594 DeltaTime=0.01666667}}]"
+659,GetBufferRW,258,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+660,SetComponentData,258,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.71990772522986 DeltaTime=0.01054359}}]"
+661,SetComponentData,259,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.72881672438234 DeltaTime=0.008908999}}]"
+662,SetComponentData,260,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.74456542823464 DeltaTime=0.0157487}}]"
+663,GetBufferRW,260,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+664,SetComponentData,260,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.73333352804184 DeltaTime=0.01666667}}]"
+665,GetBufferRW,260,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+666,SetComponentData,260,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.74456542823464 DeltaTime=0.0157487}}]"
+667,SetComponentData,261,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.75518762879074 DeltaTime=0.0106222}}]"
+668,GetBufferRW,261,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+669,SetComponentData,261,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.75000019557774 DeltaTime=0.01666667}}]"
+670,GetBufferRW,261,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+671,SetComponentData,261,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.75518762879074 DeltaTime=0.0106222}}]"
+672,GetBufferRW,261,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+673,SetComponentData,261,"Default World",Unity.Entities.VariableRateSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=7.51085375994444 DeltaTime=0.0697292}}]"
+674,GetBufferRW,261,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+675,SetComponentData,261,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.75518762879074 DeltaTime=0.0106222}}]"
+676,GetBufferRW,262,"Default World",,,"Scene (Live converted): New Sub Scene (42:1)",Unity.Scenes.ResolvedSectionEntity,
+677,SetComponentData,262,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.7699936311692 DeltaTime=0.014806}}]"
+678,GetBufferRW,262,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+679,SetComponentData,262,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.76666686311364 DeltaTime=0.01666667}}]"
+680,GetBufferRW,262,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+681,SetComponentData,262,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.7699936311692 DeltaTime=0.014806}}]"
+682,SetComponentData,263,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.78498352598399 DeltaTime=0.01498989}}]"
+683,GetBufferRW,263,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+684,SetComponentData,263,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.78333353064954 DeltaTime=0.01666667}}]"
+685,GetBufferRW,263,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+686,SetComponentData,263,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.78498352598399 DeltaTime=0.01498989}}]"
+687,SetComponentData,264,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.79482522793114 DeltaTime=0.009841702}}]"
+688,SetComponentData,265,"Default World",Unity.Entities.UpdateWorldTimeSystem,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.80498722475022 DeltaTime=0.010162}}]"
+689,GetBufferRW,265,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+690,SetComponentData,265,"Default World",Unity.Entities.FixedStepSimulationSystemGroup,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.80000019818544 DeltaTime=0.01666667}}]"
+691,GetBufferRW,265,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTimeQueue,
+692,GetComponentDataRW,265,"Default World",,,"WorldTime (43:1)",Unity.Entities.WorldTime,"[{Time={ElapsedTime=3.80000019818544 DeltaTime=0.01666667}}]"
