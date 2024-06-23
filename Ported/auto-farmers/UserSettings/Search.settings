@@ -11,7 +11,7 @@ scopes = {
 	"last_search.6B951575" = "c=Tile"
 	"OpenInspectorPreview.6B951575" = "1"
 	"currentGroup.6B951575" = "system"
-	"last_search.D847698B" = "local"
+	"last_search.D847698B" = "DebugCanvas"
 	"OpenInspectorPreview.D847698B" = "0"
 	"currentGroup.D847698B" = "component"
 	"last_search.AA50AD99" = ""
@@ -23,6 +23,9 @@ scopes = {
 	"last_search.53CD5389" = "v=this tile"
 	"OpenInspectorPreview.53CD5389" = "1"
 	"currentGroup.53CD5389" = null
+	"last_search.5A656512" = "ref=\"/Cube\""
+	"OpenInspectorPreview.5A656512" = "0"
+	"currentGroup.5A656512" = null
 }
 providers = {
 	archetype = {
@@ -124,6 +127,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"DebugCan"
 	"v=this"
 	""
 	"c=Tile"

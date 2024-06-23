@@ -3,7 +3,6 @@ using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
-using UnityEngine;
 
 
 namespace AutoFarmers.Tools
@@ -31,11 +30,12 @@ namespace AutoFarmers.Tools
             {
                 //Debug.Log("comes here");
                 var canvasInstance = state.EntityManager.Instantiate(_system.m_DebugCanvas);
+                
                 var position = entity.ValueRO.m_Position + new float3(0, 0.3f, 0);
                 //EntityManager.AddComponent<LocalTransform>(canvasInstance);
-                state.EntityManager.SetComponentData<LocalTransform>(canvasInstance, new LocalTransform { Position = float3.zero });
+                state.EntityManager.SetComponentData<LocalTransform>(canvasInstance, new LocalTransform { Position = position, Rotation = quaternion.identity, Scale = 0.1f });
 
-                state.EntityManager.SetComponentData(canvasInstance, new DebugCanvas { _value = 1 });
+                state.EntityManager.SetComponentData(canvasInstance, new DebugCanvas { _value = entity.ValueRO.m_Id });
             }
         }
 

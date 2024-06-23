@@ -115,13 +115,14 @@ namespace AutoFarmers.Farm
                 {
                     var rock = new Rock {
                         m_RockId = rockId,
-                        m_Scale = new float3(1, 0.5f, 1),
+                        m_Scale = new float3(1, 0.25f, 1),
                     };
 
                     var builder = new BlobBuilder(Allocator.Temp);
                     ref PerRockInfoAsset perRockInfo = ref builder.ConstructRoot<PerRockInfoAsset>();
                     BlobBuilderArray<PerRockInfo> arrayBuilder = builder.Allocate(ref perRockInfo.m_Rocks, rockTileIds.Length);
 
+                    float3 center = float3.zero;
                     int i = 0;
                     //TODO: optimize these 2 loops!
                     foreach (var tileId in rockTileIds)
@@ -138,6 +139,11 @@ namespace AutoFarmers.Farm
                                     m_Position = tile.ValueRO.m_Position + new float3(0, 0.25f, 0f),
                                     m_TileId = tileId
                                 };
+
+                                center.x += tile.ValueRO.m_Position.x;
+                                center.y += tile.ValueRO.m_Position.y;
+                                center.z += tile.ValueRO.m_Position.z;
+
                                 //Debug.Log("pos: " + arrayBuilder[i].m_Position + " tile: " + arrayBuilder[i].m_TileId);
                                 i++;
                             }
@@ -145,7 +151,10 @@ namespace AutoFarmers.Farm
                         //Debug.Log("tileId:" + tileId);
                     }
 
+                    center = center / rockTileIds.Length;
+
                     rock.m_BlobRef = builder.CreateBlobAssetReference<PerRockInfoAsset>(Allocator.Persistent);
+                    rock.m_Center = center;
                     builder.Dispose();
                     var entity = state.EntityManager.CreateEntity();
                     state.EntityManager.AddComponentData(entity, rock);
