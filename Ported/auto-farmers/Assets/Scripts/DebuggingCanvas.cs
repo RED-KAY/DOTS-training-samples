@@ -4,6 +4,7 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace AutoFarmers.Tools
 {
@@ -16,6 +17,9 @@ namespace AutoFarmers.Tools
         [SerializeField] private Transform _parent;
 
         [SerializeField] private Color _rockIdTextColor;
+
+        [SerializeField] private TMP_InputField _id;
+
 
         private void Update()
         {
@@ -78,6 +82,38 @@ namespace AutoFarmers.Tools
                 _initialized = true;
             }
             
+        }
+
+        public void RemovePressed()
+        {
+            if(_id == null)
+            {
+                Debug.LogError("No InputField assigned to read the id from!");
+                return;
+            }
+
+            int idToRemove = int.Parse(_id.text);
+
+            using (NativeArray<Entity> entities = _rockEntityQuery.ToEntityArray(Allocator.TempJob))
+            {
+                foreach (var entity in entities)
+                {
+                    Rock rock = _entityManager.GetComponentData<Rock>(entity);
+                    if(rock.m_RockId == idToRemove)
+                    {
+                        if (_entityManager.HasComponent<RockHitTag>(entity))
+                        {
+                            var removeTag = _entityManager.GetComponentData<RockHitTag>(entity);
+                            removeTag.m_Hit = true;
+                            _entityManager.SetComponentData(entity, removeTag);
+                        }
+                        else
+                        {
+                            _entityManager.AddComponentData(entity, new RockHitTag { m_Hit = true });
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -28,6 +28,8 @@ namespace AutoFarmers.Farm
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<Farm>();
+
+
         }
 
         //[BurstCompile]
@@ -91,6 +93,7 @@ namespace AutoFarmers.Farm
 
                     var entityQuery = state.GetEntityQuery(ComponentType.ReadOnly<Tile>());
                     var jobHandle = getTileStatusJob.ScheduleParallel(entityQuery, state.Dependency);
+                    state.Dependency = jobHandle;
                     //var jobHandle = GetTile(tileId, out GetTileJob getTileStatusJob, ref state);
                     jobHandle.Complete();
 
@@ -116,6 +119,7 @@ namespace AutoFarmers.Farm
                     var rock = new Rock {
                         m_RockId = rockId,
                         m_Scale = new float3(1, 0.25f, 1),
+                        m_Health = 30f
                     };
 
                     var builder = new BlobBuilder(Allocator.Temp);
@@ -128,6 +132,7 @@ namespace AutoFarmers.Farm
                     foreach (var tileId in rockTileIds)
                     {
                         var setTileStatusJobHandle = SetTileStatus(tileId, TileStatus.Rock, out SetTileStatusJob setTileStatusJob, ref state);
+                        state.Dependency = setTileStatusJobHandle;
                         setTileStatusJobHandle.Complete();
 
                         foreach (var tile in SystemAPI.Query<RefRW<Tile>>())
@@ -215,7 +220,17 @@ namespace AutoFarmers.Farm
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
+            var ecbSingleton = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
+            var ecb = ecbSingleton.CreateCommandBuffer(state.WorldUnmanaged);
 
+            var damageRocksjob = new DamageRocksJob()
+            {
+                _ecb = ecb.AsParallelWriter()
+            };
+
+            var handle = damageRocksjob.ScheduleParallel(state.Dependency);
+            state.Dependency = handle;
+            handle.Complete();
         }
 
         public void OnStopRunning(ref SystemState state)
@@ -256,6 +271,11 @@ namespace AutoFarmers.Farm
         public BlobAssetReference<PerRockInfoAsset> m_BlobRef;
     }
 
+    public struct RockHitTag : IComponentData {
+        public bool m_Hit;
+    }
+
+    public struct RockRemoveTag : IComponentData { }
 
     public struct Tile : IComponentData
     {
@@ -273,19 +293,25 @@ namespace AutoFarmers.Farm
     }
 
     [BurstCompile]
-    public partial struct CreateRocksJob : IJobEntity
+    public partial struct DamageRocksJob : IJobEntity
     {
-        [ReadOnly] public NativeArray<int> m_TileIds;
+        public EntityCommandBuffer.ParallelWriter _ecb;
 
         [BurstCompile]
-        public void Execute(ref Tile tile)
+        public void Execute([ChunkIndexInQuery] int chunkIndexInQuery, Entity entity, ref Rock rock, ref RockHitTag rockHitTag)
         {
-            foreach (var tileId in m_TileIds)
+            if (!rockHitTag.m_Hit) return;
+
+            rock.m_Health -= 30f;
+            rockHitTag.m_Hit = false;
+
+            if (rock.m_Health <= 0f)
             {
-                if(tile.m_Id == tileId)
-                {
-                     
-                }
+                rock.m_Health = 0f;
+                //state.EntityManager.AddComponent<RockRemoveTag>(entity);
+                //this.
+                //_ecb.AddComponent<RockRemoveTag>(chunkIndexInQuery, entity);
+                _ecb.DestroyEntity(chunkIndexInQuery, entity);
             }
         }
     }
