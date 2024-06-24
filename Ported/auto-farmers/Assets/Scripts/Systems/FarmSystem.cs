@@ -19,6 +19,8 @@ namespace AutoFarmers.Farm
         private NativeArray<Farmer> m_Farmers;
         private NativeArray<Tile> m_Tiles;
 
+        private EntityCommandBuffer _endSimSystemECB;
+
         private Random m_Random;
 
         private int m_TotalTileCount;
@@ -214,18 +216,19 @@ namespace AutoFarmers.Farm
         public void OnDestroy(ref SystemState state)
         {
             m_Tiles.Dispose();
-            //m_Farmers.Dispose();
+            var rocksDisposeAllBlobAssets = new RocksDisposeAllBlobAssets();
+            var handle = rocksDisposeAllBlobAssets.ScheduleParallel(state.Dependency);
+            handle.Complete();
         }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             var ecbSingleton = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
-            var ecb = ecbSingleton.CreateCommandBuffer(state.WorldUnmanaged);
-
+            _endSimSystemECB = ecbSingleton.CreateCommandBuffer(state.WorldUnmanaged);
             var damageRocksjob = new DamageRocksJob()
             {
-                _ecb = ecb.AsParallelWriter()
+                _ecb = _endSimSystemECB.AsParallelWriter()
             };
 
             var handle = damageRocksjob.ScheduleParallel(state.Dependency);
@@ -237,6 +240,7 @@ namespace AutoFarmers.Farm
         {
 
         }
+
     }
 
 
@@ -290,6 +294,16 @@ namespace AutoFarmers.Farm
         public float3 m_Position;
         public Tile m_CurrentTile;
         public Tile m_TargetTile;
+    }
+
+    [BurstCompile]
+    public partial struct RocksDisposeAllBlobAssets : IJobEntity
+    {
+        [BurstCompile]
+        public void Execute(ref Rock rock)
+        {
+            rock.m_BlobRef.Dispose();
+        }
     }
 
     [BurstCompile]

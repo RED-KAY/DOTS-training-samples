@@ -46,7 +46,7 @@ namespace AutoFarmers.Tools
                         c.GetComponentInChildren<TextMeshProUGUI>().text = tile.m_Id.ToString();
 
                         // Do something with the components
-                        Debug.Log($"Entity {entity.Index}: Tile = {tile.m_Id}, Status = {tile.m_Status}");
+                        //Debug.Log($"Entity {entity.Index}: Tile = {tile.m_Id}, Status = {tile.m_Status}");
                         _doneOperation = true;
                     }
                 }
