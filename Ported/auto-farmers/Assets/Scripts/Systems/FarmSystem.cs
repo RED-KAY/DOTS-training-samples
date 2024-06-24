@@ -311,6 +311,7 @@ namespace AutoFarmers.Farm
                 //state.EntityManager.AddComponent<RockRemoveTag>(entity);
                 //this.
                 //_ecb.AddComponent<RockRemoveTag>(chunkIndexInQuery, entity);
+                rock.m_BlobRef.Dispose();
                 _ecb.DestroyEntity(chunkIndexInQuery, entity);
             }
         }
