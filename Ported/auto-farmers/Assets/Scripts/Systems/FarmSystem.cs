@@ -173,6 +173,19 @@ namespace AutoFarmers.Farm
                 currentRockPercent = GetCurrentRockPercent(ref state);
             }
 
+            //Spawning First Farmer
+            var getEmptyTilesJob = new GetEmptyTiles
+            {
+                m_EmptyTiles = new NativeList<Tile>(Allocator.TempJob)
+            };
+            var getEmptyTilesJobHandle = getEmptyTilesJob.Schedule(state.Dependency);
+            getEmptyTilesJobHandle.Complete();
+
+            Tile spawnTile = getEmptyTilesJob.m_EmptyTiles[m_Random.NextInt(0, getEmptyTilesJob.m_EmptyTiles.Length)];
+            var farmerEntity = state.EntityManager.CreateEntity();
+            state.EntityManager.AddComponentData(farmerEntity, new Farmer { m_CurrentTile = spawnTile, m_Position = spawnTile.m_Position });
+            state.EntityManager.AddComponent<FirstFarmer>(farmerEntity);
+
             var rockHitCT = new NativeArray<ComponentType>(3, Allocator.TempJob);
             rockHitCT[0] = ComponentType.ReadWrite<Rock>();
             rockHitCT[1] = ComponentType.ReadWrite<RockHitTag>();
@@ -319,6 +332,8 @@ namespace AutoFarmers.Farm
         public int m_RockEntityId;
     }
 
+    public struct FirstFarmer : IComponentData { }
+
     public struct Farmer : IComponentData
     {
         public float3 m_Position;
@@ -458,6 +473,20 @@ namespace AutoFarmers.Farm
                     return;
                 }
 
+            }
+        }
+    }
+
+    [BurstCompile]
+    public partial struct GetEmptyTiles : IJobEntity
+    {
+        public NativeList<Tile> m_EmptyTiles;
+
+        public void Execute(ref Tile tile)
+        {
+            if(tile.m_Status == TileStatus.None)
+            {
+                m_EmptyTiles.Add(tile);
             }
         }
     }

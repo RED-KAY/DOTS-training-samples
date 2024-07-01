@@ -18,10 +18,14 @@ namespace AutoFarmers.Farm
 
         private Matrix4x4[][] m_FarmCells;
         private Matrix4x4[][] m_Rocks;
+        private Matrix4x4[][] m_Farmers;
+
+        private Vector3 m_FarmerScale = new Vector3(1, 2, 1);
 
         protected override void OnCreate()
         {
             RequireForUpdate<FarmDrawing>();
+            RequireForUpdate<Farmer>();
         }
 
         protected override void OnStartRunning()
@@ -59,6 +63,7 @@ namespace AutoFarmers.Farm
                             break;
                     }
                 }
+
             }
         }
 
@@ -91,14 +96,14 @@ namespace AutoFarmers.Farm
                     //Debug.Log(position + ", " + rock.ValueRO.m_RockId);
                     m_Rocks[r][c] = Matrix4x4.TRS(position, Quaternion.identity, Vector3.one);
 
-                    if (c < m_FarmCells[r].Length - 1)
+                    if (c < m_Rocks[r].Length - 1)
                     {
                         c++;
                     }
                     else
                     {
                         c = 0;
-                        if (r < m_FarmCells.Length - 1)
+                        if (r < m_Rocks.Length - 1)
                         {
                             r++;
                         }
@@ -110,11 +115,50 @@ namespace AutoFarmers.Farm
                 }
             }
         }
+        
+        private void UpdateFarmerMatrices()
+        {
+            var query = GetEntityQuery(typeof(Farmer));
+            int count = query.CalculateEntityCount();
+            int len = (int)math.ceil((float)count / (float)m_InstancesPerBatch);
+            m_Farmers = new Matrix4x4[len][];
+            for (int i = 0; i < m_Farmers.Length; i++)
+            {
+                m_Farmers[i] = new Matrix4x4[math.min(m_InstancesPerBatch, count - i * m_InstancesPerBatch)];
+            }
+
+            Debug.Log("farmers len: " + m_Farmers.Length + ", len: " + len);
+            int r=0; int c=0;
+            foreach (var farmer in SystemAPI.Query<RefRO<Farmer>>())
+            {
+                Vector3 position = new Vector3(farmer.ValueRO.m_Position.x, farmer.ValueRO.m_Position.y+1, farmer.ValueRO.m_Position.z);
+
+                m_Farmers[r][c] = Matrix4x4.TRS(position, Quaternion.identity, m_FarmerScale);
+
+                if (c < m_Farmers[r].Length - 1)
+                {
+                    c++;
+                }
+                else
+                {
+                    c = 0;
+                    if (r < m_Farmers.Length - 1)
+                    {
+                        r++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+        }
 
         protected override void OnUpdate()
         {
 
             UpdateRocksMatrices();
+            UpdateFarmerMatrices();
 
             if (m_FarmCells != null && m_FarmCells.Length > 0)
             {
@@ -127,6 +171,12 @@ namespace AutoFarmers.Farm
                 {
                     Graphics.DrawMeshInstanced(m_FarmDrawing.m_RockMesh, 0, m_FarmDrawing.m_RockMaterial, m_Rocks[i]);
                 }
+
+                for (int i = 0; i < m_Farmers.Length; i++)
+                {
+                    Graphics.DrawMeshInstanced(m_FarmDrawing.m_FarmerMesh, 0, m_FarmDrawing.m_FarmerMaterial, m_Farmers[i]);
+
+                }
             }
         }
     }
@@ -138,6 +188,17 @@ namespace AutoFarmers.Farm
         private void Execute(ref Rock rock)
         {
             m_Count.Value += rock.m_BlobRef.Value.m_Rocks.Length;
+        }
+    }
+
+    [BurstCompile]
+    public partial struct FarmersTotalCountJob : IJobEntity
+    {
+        public NativeReference<int> m_Count;
+
+        private void Execute(ref Farmer farmer)
+        {
+            m_Count.Value += 1;
         }
     }
 }
