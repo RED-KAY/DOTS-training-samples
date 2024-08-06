@@ -11,13 +11,13 @@ scopes = {
 	"last_search.6B951575" = "c=Tile"
 	"OpenInspectorPreview.6B951575" = "1"
 	"currentGroup.6B951575" = "system"
-	"last_search.D847698B" = "rock"
+	"last_search.D847698B" = ""
 	"OpenInspectorPreview.D847698B" = "0"
 	"currentGroup.D847698B" = "component"
 	"last_search.AA50AD99" = ""
 	"OpenInspectorPreview.AA50AD99" = "0"
 	"currentGroup.AA50AD99" = "archetype"
-	"last_search.7F2A3673" = "c=Tile"
+	"last_search.7F2A3673" = ""
 	"OpenInspectorPreview.7F2A3673" = "0"
 	"currentGroup.7F2A3673" = null
 	"last_search.53CD5389" = "v=this tile"
@@ -127,6 +127,8 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"rock re"
+	"rockremo"
 	"rockhi"
 	"comp: RemoveR"
 	"DebugCan"
