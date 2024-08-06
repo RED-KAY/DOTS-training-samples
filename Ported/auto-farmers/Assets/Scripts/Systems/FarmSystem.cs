@@ -41,9 +41,9 @@ namespace AutoFarmers.Farm
             m_Farm = SystemAPI.GetSingleton<Farm>();
             m_Random = Random.CreateFromIndex(123);
 
+            //SPAWNING TILES
             m_TotalTileCount = m_Farm.m_Size.x * m_Farm.m_Size.y;
             m_Tiles = new NativeArray<Tile>(m_TotalTileCount, Allocator.Persistent);
-
             for (int i = 0; i < m_Farm.m_Size.x; i++)
             {
                 for (int j = 0; j < m_Farm.m_Size.y; j++)
@@ -61,11 +61,8 @@ namespace AutoFarmers.Farm
                 }
             }
 
-            //SetTileStatus(2, TileStatus.Planted, ref state);
-
+            //SPAWNING ROCKS
             NativeList<int> rockTileIds;
-
-
             int currentRockPercent = GetCurrentRockPercent(ref state);
             int rockId = 0;
             while (currentRockPercent < m_Farm.m_RockPercentage)
@@ -173,19 +170,7 @@ namespace AutoFarmers.Farm
                 currentRockPercent = GetCurrentRockPercent(ref state);
             }
 
-            //Spawning First Farmer
-            var getEmptyTilesJob = new GetEmptyTiles
-            {
-                m_EmptyTiles = new NativeList<Tile>(Allocator.TempJob)
-            };
-            var getEmptyTilesJobHandle = getEmptyTilesJob.Schedule(state.Dependency);
-            getEmptyTilesJobHandle.Complete();
-
-            Tile spawnTile = getEmptyTilesJob.m_EmptyTiles[m_Random.NextInt(0, getEmptyTilesJob.m_EmptyTiles.Length)];
-            var farmerEntity = state.EntityManager.CreateEntity();
-            state.EntityManager.AddComponentData(farmerEntity, new Farmer { m_CurrentTile = spawnTile, m_Position = spawnTile.m_Position });
-            state.EntityManager.AddComponent<FirstFarmer>(farmerEntity);
-
+            //CREATION OF ENTITY QUERIES
             var rockHitCT = new NativeArray<ComponentType>(3, Allocator.TempJob);
             rockHitCT[0] = ComponentType.ReadWrite<Rock>();
             rockHitCT[1] = ComponentType.ReadWrite<RockHitTag>();
@@ -199,6 +184,7 @@ namespace AutoFarmers.Farm
             m_RockRemoveTagEQ = state.GetEntityQuery(rockRemoveTagCT);
             rockRemoveTagCT.Dispose();
         }
+
 
 
         [BurstCompile]
