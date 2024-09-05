@@ -1,24 +1,29 @@
-using AutoFarmers.Farm;
-using TMPro;
-using Unity.Collections;
-using Unity.Entities;
-using Unity.VisualScripting;
-using UnityEngine;
-using UnityEngine.UI;
-
 namespace AutoFarmers.Tools
 {
+    using AutoFarmers.Farm;
+    using AutoFarmers.Farmers;
+    using System.ComponentModel;
+    using TMPro;
+    using Unity.Collections;
+    using Unity.Entities;
+    using Unity.Mathematics;
+    using Unity.VisualScripting;
+    using UnityEngine;
+    using UnityEngine.UI;
+    //using Farmer = AutoFarmers.Farm.Farmer;
     public class DebuggingCanvas : MonoBehaviour
     {
         private bool _initialized = false, _doneOperation = false;
         EntityManager _entityManager;
-        private EntityQuery _tileEntityQuery, _rockEntityQuery;
+        private EntityQuery _tileEntityQuery, _rockEntityQuery, _farmerEntityQuery;
         [SerializeField] private Canvas _debugCanvas;
         [SerializeField] private Transform _parent;
 
         [SerializeField] private Color _rockIdTextColor;
 
-        [SerializeField] private TMP_InputField _id;
+        [SerializeField] private TMP_InputField _rockId;
+        [SerializeField] private TMP_InputField _locationId;
+
 
 
         private void Update()
@@ -78,6 +83,7 @@ namespace AutoFarmers.Tools
 
                 _tileEntityQuery = _entityManager.CreateEntityQuery(ComponentType.ReadOnly<Tile>());
                 _rockEntityQuery = _entityManager.CreateEntityQuery(ComponentType.ReadOnly<Rock>());
+                _farmerEntityQuery = _entityManager.CreateEntityQuery(ComponentType.ReadOnly<Farmer>());
 
                 _initialized = true;
             }
@@ -86,13 +92,13 @@ namespace AutoFarmers.Tools
 
         public void RemovePressed()
         {
-            if(_id == null)
+            if(_rockId == null)
             {
                 Debug.LogError("No InputField assigned to read the id from!");
                 return;
             }
 
-            int idToRemove = int.Parse(_id.text);
+            int idToRemove = int.Parse(_rockId.text);
 
             using (NativeArray<Entity> entities = _rockEntityQuery.ToEntityArray(Allocator.TempJob))
             {
@@ -114,6 +120,96 @@ namespace AutoFarmers.Tools
                     }
                 }
             }
+        }
+
+        public void MoveFarmer()
+        {
+            if (_locationId == null)
+            {
+                Debug.LogError("No InputField assigned to read the id from!");
+                return;
+            }
+
+            string input = _locationId.text;
+            string[] splitText = _locationId.text.Split(" ");
+            foreach (string line in splitText) { 
+                Debug.Log(line);
+            }
+
+            float3 location = float3.zero;
+            int farmerId = int.Parse(splitText[0]);
+
+
+            if (splitText.Length == 3)
+            {
+                if (splitText[2] == "r")
+                {
+                    int rockId = int.Parse(splitText[1]);
+                    using (NativeArray<Entity> entities = _rockEntityQuery.ToEntityArray(Allocator.TempJob))
+                    {
+                        foreach (var entity in entities)
+                        {
+                            Rock rock = _entityManager.GetComponentData<Rock>(entity);
+                            if (rock.m_RockId == rockId)
+                            {
+                                location = rock.m_Center;
+                            }
+                        }
+                    }
+                }
+            }
+            else if (splitText.Length == 2) { 
+                int tileId = int.Parse(splitText[1]);
+                using (NativeArray<Entity> entities = _tileEntityQuery.ToEntityArray(Allocator.TempJob))
+                {
+                    foreach (var entity in entities)
+                    {
+                        Tile tile = _entityManager.GetComponentData<Tile>(entity);
+                        if (tile.m_Id == tileId)
+                        {
+                            location = tile.m_Position;
+                        }
+                    }
+                }
+            }
+
+            if (!location.Equals(float3.zero)) {
+                using (NativeArray<Entity> entities = _farmerEntityQuery.ToEntityArray(Allocator.TempJob))
+                {
+                    foreach (var entity in entities)
+                    {
+                        Farmer farmer = _entityManager.GetComponentData<Farmer>(entity);
+                        if (farmer.m_Id == farmerId)
+                        {
+                            _entityManager.AddComponentData(entity, new FarmerMove { _Location = location });
+                        }
+                    }
+                }
+            }
+
+
+            //int id = int.Parse(_locationId.text);
+
+            //using (NativeArray<Entity> entities = _rockEntityQuery.ToEntityArray(Allocator.TempJob))
+            //{
+            //    foreach (var entity in entities)
+            //    {
+            //        Rock rock = _entityManager.GetComponentData<Rock>(entity);
+            //        if (rock.m_RockId == id)
+            //        {
+            //            if (_entityManager.HasComponent<RockHitTag>(entity))
+            //            {
+            //                var removeTag = _entityManager.GetComponentData<RockHitTag>(entity);
+            //                removeTag.m_Hit = true;
+            //                _entityManager.SetComponentData(entity, removeTag);
+            //            }
+            //            else
+            //            {
+            //                _entityManager.AddComponentData(entity, new RockHitTag { m_Hit = true });
+            //            }
+            //        }
+            //    }
+            //}
         }
     }
 }

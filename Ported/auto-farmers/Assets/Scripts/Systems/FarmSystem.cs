@@ -322,6 +322,7 @@ namespace AutoFarmers.Farm
 
     public struct Farmer : IComponentData
     {
+        public int m_Id;
         public float3 m_Position;
         public Tile m_CurrentTile;
         public Tile m_TargetTile;

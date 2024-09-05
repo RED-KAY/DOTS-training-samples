@@ -1,59 +1,122 @@
-using AutoFarmers.Farm;
-using Unity.Collections;
-using Unity.Entities;
-using Unity.Mathematics;
-
-[UpdateAfter(typeof(FarmSystem))]
-public partial struct FarmerSystem : ISystem, ISystemStartStop
+namespace AutoFarmers.Farmers
 {
-    //TODO: 1. Farmer movement system.
-    //TODO: 2. Spawning a Farmer.
+    using AutoFarmers.Farm;
+    using Unity.Burst;
+    using Unity.Collections;
+    using Unity.Entities;
+    using Unity.Mathematics;
 
-    private Farm m_Farm;
-    private Random m_Random;
-
-    public void OnCreate(ref SystemState state)
+    [BurstCompile, UpdateAfter(typeof(FarmSystem))]
+    public partial struct FarmerSystem : ISystem, ISystemStartStop
     {
-        state.RequireForUpdate<Farm>();
-    }
-    
-    public void OnUpdate(ref SystemState state)
-    {
+        //TODO: 1. Farmer movement system.
+        //TODO: 2. Spawning a Farmer.
 
-    }
+        private Farm m_Farm;
+        private Random m_Random;
 
-    public void OnDestroy(ref SystemState state)
-    {
+        private EntityCommandBuffer _endSimSystemECB;
 
-    }
+        private EntityQuery m_FarmersToMoveEQ, m_FarmersEQ;
 
-    public void OnStartRunning(ref SystemState state)
-    {
-        m_Farm = SystemAPI.GetSingleton<Farm>();
-        m_Random = Random.CreateFromIndex(123);
+        private int m_FarmerCount;
 
-        //SPAWNING FIRST FARMER
-        var farmerEntity = SpawnFarmer(ref state);
-        state.EntityManager.AddComponent<FirstFarmer>(farmerEntity);
-    }
-
-    private Entity SpawnFarmer(ref SystemState state)
-    {
-        var getEmptyTilesJob = new GetEmptyTiles
+        [BurstCompile]
+        public void OnCreate(ref SystemState state)
         {
-            m_EmptyTiles = new NativeList<Tile>(Allocator.TempJob)
-        };
-        var getEmptyTilesJobHandle = getEmptyTilesJob.Schedule(state.Dependency);
-        getEmptyTilesJobHandle.Complete();
+            state.RequireForUpdate<Farm>();
+        }
 
-        Tile spawnTile = getEmptyTilesJob.m_EmptyTiles[m_Random.NextInt(0, getEmptyTilesJob.m_EmptyTiles.Length)];
-        var farmerEntity = state.EntityManager.CreateEntity();
-        state.EntityManager.AddComponentData(farmerEntity, new Farmer { m_CurrentTile = spawnTile, m_Position = spawnTile.m_Position });
-        return farmerEntity;
+        [BurstCompile]
+        public void OnUpdate(ref SystemState state)
+        {
+            var ecbSingleton = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
+            _endSimSystemECB = ecbSingleton.CreateCommandBuffer(state.WorldUnmanaged);
+
+            var moveFarmerJob = new MoveFarmerJob
+            {
+                _ecb = _endSimSystemECB.AsParallelWriter()
+            };
+            var moveFarmerJobHandle = moveFarmerJob.ScheduleParallel(m_FarmersToMoveEQ, state.Dependency);
+
+            foreach (var farmer in SystemAPI.Query<RefRO<Farmer>>())
+            {
+
+            }
+
+        }
+
+        public void OnDestroy(ref SystemState state)
+        {
+            m_FarmersToMoveEQ.Dispose();
+        }
+
+        public void OnStartRunning(ref SystemState state)
+        {
+            m_Farm = SystemAPI.GetSingleton<Farm>();
+            m_Random = Random.CreateFromIndex(123);
+
+            //SPAWNING FIRST FARMER
+            var farmerEntity = SpawnFarmer(ref state);
+            state.EntityManager.AddComponent<FirstFarmer>(farmerEntity);
+
+            //CREATION OF ENTITY QUERIES
+            var farmersToMoveCT = new NativeArray<ComponentType>(2, Allocator.Temp);
+            farmersToMoveCT[0] = ComponentType.ReadWrite<Farmer>();
+            farmersToMoveCT[1] = ComponentType.ReadOnly<FarmerMove>();
+            m_FarmersToMoveEQ = state.GetEntityQuery(farmersToMoveCT);
+            farmersToMoveCT.Dispose();
+
+            var farmersCT = new NativeArray<ComponentType>(1, Allocator.Temp);
+            farmersCT[0] = ComponentType.ReadOnly<Farmer>();
+            m_FarmersEQ = state.GetEntityQuery(farmersCT);
+            farmersCT.Dispose();
+        }
+
+        private Entity SpawnFarmer(ref SystemState state)
+        {
+            var getEmptyTilesJob = new GetEmptyTiles
+            {
+                m_EmptyTiles = new NativeList<Tile>(Allocator.TempJob)
+            };
+            var getEmptyTilesJobHandle = getEmptyTilesJob.Schedule(state.Dependency);
+            getEmptyTilesJobHandle.Complete();
+
+            Tile spawnTile = getEmptyTilesJob.m_EmptyTiles[m_Random.NextInt(0, getEmptyTilesJob.m_EmptyTiles.Length)];
+            var farmerEntity = state.EntityManager.CreateEntity();
+            state.EntityManager.AddComponentData(farmerEntity, new Farmer { m_Id = m_FarmerCount, m_CurrentTile = spawnTile, m_Position = spawnTile.m_Position });
+            m_FarmerCount++;
+            
+            return farmerEntity;
+        }
+
+        public void OnStopRunning(ref SystemState state)
+        {
+
+        }
     }
 
-    public void OnStopRunning(ref SystemState state)
+    public struct FarmerMove : IComponentData
     {
-        
+        public float3 _Location;
+    }
+
+    [BurstCompile]
+    public partial struct MoveFarmerJob : IJobEntity
+    {
+        public EntityCommandBuffer.ParallelWriter _ecb;
+
+        [BurstCompile]
+        public void Execute([ChunkIndexInQuery] int chunkIndexInQuery, Entity entity, ref Farmer farmer, ref FarmerMove farmerMove)
+        {
+            float3 rel = (farmerMove._Location - farmer.m_Position);
+            farmer.m_Position += math.normalize(rel) * 2f;
+            float distance = math.length(rel);
+
+            if (distance >= 0.2f) {
+                
+                _ecb.RemoveComponent(chunkIndexInQuery, entity, ComponentType.ReadOnly<FarmerMove>());
+            }
+        }
     }
 }
