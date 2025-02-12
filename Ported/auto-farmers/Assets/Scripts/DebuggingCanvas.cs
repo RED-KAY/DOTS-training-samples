@@ -23,15 +23,14 @@ namespace AutoFarmers.Tools
 
         [SerializeField] private TMP_InputField _rockId;
         [SerializeField] private TMP_InputField _locationId;
-
-
-
+        
+        [SerializeField] private GameObject _debugPanel;
+        
         private void Update()
         {
             if(!_initialized)
                 TryInitialize();
             
-
             if(_initialized && !_doneOperation)
             {
                 using (NativeArray<Entity> entities = _tileEntityQuery.ToEntityArray(Allocator.TempJob))
@@ -74,6 +73,11 @@ namespace AutoFarmers.Tools
                 }
             }
         }
+        
+        public void SetDebugPanel(bool value)
+        {
+           _debugPanel.SetActive(value); 
+        }
 
         void TryInitialize()
         {
@@ -89,7 +93,6 @@ namespace AutoFarmers.Tools
             }
             
         }
-
         public void RemovePressed()
         {
             if(_rockId == null)
@@ -121,7 +124,6 @@ namespace AutoFarmers.Tools
                 }
             }
         }
-
         public void MoveFarmer()
         {
             if (_locationId == null)
@@ -186,30 +188,6 @@ namespace AutoFarmers.Tools
                     }
                 }
             }
-
-
-            //int id = int.Parse(_locationId.text);
-
-            //using (NativeArray<Entity> entities = _rockEntityQuery.ToEntityArray(Allocator.TempJob))
-            //{
-            //    foreach (var entity in entities)
-            //    {
-            //        Rock rock = _entityManager.GetComponentData<Rock>(entity);
-            //        if (rock.m_RockId == id)
-            //        {
-            //            if (_entityManager.HasComponent<RockHitTag>(entity))
-            //            {
-            //                var removeTag = _entityManager.GetComponentData<RockHitTag>(entity);
-            //                removeTag.m_Hit = true;
-            //                _entityManager.SetComponentData(entity, removeTag);
-            //            }
-            //            else
-            //            {
-            //                _entityManager.AddComponentData(entity, new RockHitTag { m_Hit = true });
-            //            }
-            //        }
-            //    }
-            //}
         }
     }
 }
