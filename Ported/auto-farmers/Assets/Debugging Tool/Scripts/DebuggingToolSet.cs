@@ -2,12 +2,20 @@ using UnityEngine;
 
 namespace DebugTool.UI
 {
-    public struct DTEntry
+    public class DTEntry
     {
         public int m_Id;
         public string m_Title;
         public DTType m_Type;
         public DTTypeData m_Data;
+    }
+    
+    public enum DTType
+    {
+        None,
+        Toggles,
+        InputField,
+        Button
     }
 
     public interface DTTypeData
@@ -15,13 +23,13 @@ namespace DebugTool.UI
         
     }
 
-    public struct DTToggles : DTTypeData
+    public class DTToggles : DTTypeData
     {
         public string[] m_Labels;
         public bool[] m_Values;
     }
 
-    public struct DTInputField : DTTypeData
+    public class DTInputField : DTTypeData
     {
         public string m_InputFieldPlaceholder;
         public string m_ButtonLabel;
@@ -33,7 +41,7 @@ namespace DebugTool.UI
         }
     }
 
-    public struct DTButton : DTTypeData
+    public class DTButton : DTTypeData
     {
         public string m_Label;
 
@@ -43,14 +51,6 @@ namespace DebugTool.UI
         }
     }
 
-    public enum DTType
-    {
-        None,
-        Toggles,
-        InputField,
-        Button
-    }
-
     public class DebuggingToolSet : MonoBehaviour
     {
         private DTEntry[] m_Entries;
@@ -58,6 +58,8 @@ namespace DebugTool.UI
         [SerializeField] private DebugToggleView m_DebugToggleViewPrefab;
         [SerializeField] private DebugInputFieldView m_DebugInputFieldPrefab;
         [SerializeField] private DebugButtonView m_DebugButtonPrefab;
+
+        [SerializeField] private RectTransform m_Contents;
 
         void DefineEntriesHERE()
         {
@@ -95,12 +97,10 @@ namespace DebugTool.UI
             };
         }
         
-        
         void Awake()
         {
             DefineEntriesHERE();
             InitilizeTool();
-
         }
 
         private void InitilizeTool()
@@ -113,9 +113,13 @@ namespace DebugTool.UI
                 switch (entry.m_Type)
                 {
                     case DTType.Toggles:
+                        DebugToggleView toggleView = Instantiate(m_DebugToggleViewPrefab, m_Contents);
+                        toggleView.Initialize(entry);
                         break;
                     
                     case DTType.InputField:
+                        DebugInputFieldView inputFieldView = Instantiate(m_DebugInputFieldPrefab, m_Contents);
+                        inputFieldView.Initialize(entry);
                         break;
                     
                     case DTType.Button:
