@@ -19,7 +19,7 @@ namespace DebugTool.UI
             m_InputField = GetComponentInChildren<TMP_InputField>();
             m_Button = GetComponentInChildren<Button>();
             
-            m_ButtonLabel = GetComponentInChildren<TextMeshProUGUI>();
+            m_ButtonLabel = m_Button.GetComponentInChildren<TextMeshProUGUI>();
             m_Placeholder = m_InputField.transform.Find("Text Area/Placeholder").GetComponent<TextMeshProUGUI>();
             
             m_Button.onClick.AddListener(OnClick);
@@ -29,6 +29,7 @@ namespace DebugTool.UI
         private void OnClick()
         {
             MyEventManager.TriggerEvent<int, string>(Events.Debug.k_OnDebugingSettingChanged, Id, m_InputField.text);
+            m_EntryData.m_Action?.Invoke(Id, m_InputField.text);
         }
 
         public override void Initialize(DTEntry entryData)
@@ -43,7 +44,8 @@ namespace DebugTool.UI
             if(!m_StartCalled) this.Start();
 
             DTInputField inputField = (DTInputField)entryData.m_Data;
-
+            m_Placeholder.text = inputField.m_InputFieldPlaceholder;
+            m_ButtonLabel.text = string.IsNullOrEmpty(inputField.m_ButtonLabel) ? "A" : inputField.m_ButtonLabel;
         }
     }
 }

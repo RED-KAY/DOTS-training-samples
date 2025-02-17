@@ -1,3 +1,5 @@
+using System;
+using AutoFarmers.Tools;
 using UnityEngine;
 
 namespace DebugTool.UI
@@ -8,6 +10,7 @@ namespace DebugTool.UI
         public string m_Title;
         public DTType m_Type;
         public DTTypeData m_Data;
+        public Action<int, object> m_Action;
     }
     
     public enum DTType
@@ -73,11 +76,17 @@ namespace DebugTool.UI
                     {
                         m_Labels = new string[]
                         {
-                            "Test 1",
-                            "Test 2",
+                            "All",
+                            "OG",
+                            "None"
                         },
 
-                        m_Values = new[] { false, false }
+                        m_Values = new[] { false, false, false }
+                    },
+                    m_Action = (id, data) =>
+                    {
+                        string l = (string)data;
+                        
                     }
                 },
 
@@ -92,19 +101,21 @@ namespace DebugTool.UI
                 {
                     m_Title = "Debug Tool 3",
                     m_Type = DTType.Button,
-                    m_Data = (DTTypeData)new DTButton(mLabel: "Test 3")
+                    m_Data = (DTTypeData)new DTButton(string.Empty)
                 }
             };
         }
         
         void Awake()
         {
-            DefineEntriesHERE();
+            DebugToolsDataEntries.Instance.Init();
+            //DefineEntriesHERE();
             InitilizeTool();
         }
 
         private void InitilizeTool()
         {
+            m_Entries = DebugToolsDataEntries.Instance.Entries;
             for (int i=0; i<m_Entries.Length; i++)
             {
                 DTEntry entry = m_Entries[i];
@@ -123,6 +134,8 @@ namespace DebugTool.UI
                         break;
                     
                     case DTType.Button:
+                        DebugButtonView debugButtonView = Instantiate(m_DebugButtonPrefab, m_Contents);
+                        debugButtonView.Initialize(entry);
                         break;
                     
                     default:

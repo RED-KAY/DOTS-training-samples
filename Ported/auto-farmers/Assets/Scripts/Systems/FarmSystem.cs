@@ -1,15 +1,16 @@
-using System.Diagnostics;
-using Unity.Burst;
-using Unity.Burst.Intrinsics;
-using Unity.Collections;
-using Unity.Entities;
-using Unity.Jobs;
-using Unity.Mathematics;
-using Random = Unity.Mathematics.Random;
-using Debug = UnityEngine.Debug;
-
 namespace AutoFarmers.Farm
 {
+    using System.Diagnostics;
+    using AutoFarmers.Farmer;
+    using Farmer = AutoFarmers.Farmer.Farmer;
+    using Unity.Burst;
+    using Unity.Burst.Intrinsics;
+    using Unity.Collections;
+    using Unity.Entities;
+    using Unity.Jobs;
+    using Unity.Mathematics;
+    using Random = Unity.Mathematics.Random;
+    using Debug = UnityEngine.Debug;
 
     [BurstCompile, UpdateInGroup(typeof(SimulationSystemGroup))]
     public partial struct FarmSystem : ISystem, ISystemStartStop
@@ -31,8 +32,6 @@ namespace AutoFarmers.Farm
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<Farm>();
-
-
         }
 
         //[BurstCompile]
@@ -79,7 +78,7 @@ namespace AutoFarmers.Farm
 
                 for (int index = 0; index < totalTiles; index++)
                 {
-                    int i = rockX + (index / height); 
+                    int i = rockX + (index / height);
                     int j = rockY + (index % height);
                     int tileId = i * m_Farm.m_Size.y + j;
                     var getTileStatusJob = new GetTileJob()
@@ -111,12 +110,12 @@ namespace AutoFarmers.Farm
                         notValid = true;
                         break;
                     }
-
                 }
 
                 if (!notValid)
                 {
-                    var rock = new Rock {
+                    var rock = new Rock
+                    {
                         m_RockId = rockId,
                         m_Scale = new float3(1, 0.25f, 1),
                         m_Health = 30f
@@ -124,20 +123,22 @@ namespace AutoFarmers.Farm
 
                     var builder = new BlobBuilder(Allocator.Temp);
                     ref PerRockInfoAsset perRockInfo = ref builder.ConstructRoot<PerRockInfoAsset>();
-                    BlobBuilderArray<PerRockInfo> arrayBuilder = builder.Allocate(ref perRockInfo.m_Rocks, rockTileIds.Length);
+                    BlobBuilderArray<PerRockInfo> arrayBuilder =
+                        builder.Allocate(ref perRockInfo.m_Rocks, rockTileIds.Length);
 
                     float3 center = float3.zero;
                     int i = 0;
                     //TODO: optimize these 2 loops!
                     foreach (var tileId in rockTileIds)
                     {
-                        var setTileStatusJobHandle = SetTileStatus(tileId, TileStatus.Rock, out SetTileStatusJob setTileStatusJob, ref state);
+                        var setTileStatusJobHandle = SetTileStatus(tileId, TileStatus.Rock,
+                            out SetTileStatusJob setTileStatusJob, ref state);
                         state.Dependency = setTileStatusJobHandle;
                         setTileStatusJobHandle.Complete();
 
                         foreach (var tile in SystemAPI.Query<RefRW<Tile>>())
                         {
-                            if(tile.ValueRO.m_Id == tileId)
+                            if (tile.ValueRO.m_Id == tileId)
                             {
                                 arrayBuilder[i] = new PerRockInfo
                                 {
@@ -165,6 +166,7 @@ namespace AutoFarmers.Farm
                     state.EntityManager.AddComponentData(entity, rock);
                     rockId++;
                 }
+
                 rockTileIds.Dispose();
 
                 currentRockPercent = GetCurrentRockPercent(ref state);
@@ -186,9 +188,9 @@ namespace AutoFarmers.Farm
         }
 
 
-
         [BurstCompile]
-        private JobHandle SetTileStatus(int targetTileId, TileStatus statusToSet, out SetTileStatusJob setTileJob, ref SystemState state)
+        private JobHandle SetTileStatus(int targetTileId, TileStatus statusToSet, out SetTileStatusJob setTileJob,
+            ref SystemState state)
         {
             setTileJob = new SetTileStatusJob()
             {
@@ -221,6 +223,7 @@ namespace AutoFarmers.Farm
 
                 currentCoverage++;
             }
+
             return currentCoverage;
         }
 
@@ -267,9 +270,7 @@ namespace AutoFarmers.Farm
 
         public void OnStopRunning(ref SystemState state)
         {
-
         }
-
     }
 
 
@@ -296,19 +297,25 @@ namespace AutoFarmers.Farm
     public struct Rock : IComponentData
     {
         public int m_RockId;
+
         public float3 m_Center;
+
         //public NativeArray<int> m_TileIds;
         public float m_Health;
+
         //public NativeArray<float3> m_Positions;
         public float3 m_Scale;
         public BlobAssetReference<PerRockInfoAsset> m_BlobRef;
     }
 
-    public struct RockHitTag : IComponentData {
+    public struct RockHitTag : IComponentData
+    {
         public bool m_Hit;
     }
 
-    public struct RockRemoveTag : IComponentData { }
+    public struct RockRemoveTag : IComponentData
+    {
+    }
 
     public struct Tile : IComponentData
     {
@@ -318,15 +325,6 @@ namespace AutoFarmers.Farm
         public int m_RockEntityId;
     }
 
-    public struct FirstFarmer : IComponentData { }
-
-    public struct Farmer : IComponentData
-    {
-        public int m_Id;
-        public float3 m_Position;
-        public Tile m_CurrentTile;
-        public Tile m_TargetTile;
-    }
 
     [BurstCompile]
     public partial struct RocksDisposeAllBlobAssets : IJobEntity
@@ -346,7 +344,7 @@ namespace AutoFarmers.Farm
         [BurstCompile]
         public void Execute(ref Rock rock)
         {
-            for(int i=0; i < rock.m_BlobRef.Value.m_Rocks.Length; i++)
+            for (int i = 0; i < rock.m_BlobRef.Value.m_Rocks.Length; i++)
             {
                 m_TileIds.Add(rock.m_BlobRef.Value.m_Rocks[i].m_TileId);
             }
@@ -359,7 +357,8 @@ namespace AutoFarmers.Farm
         public EntityCommandBuffer.ParallelWriter _ecb;
 
         [BurstCompile]
-        public void Execute([ChunkIndexInQuery] int chunkIndexInQuery, Entity entity, ref Rock rock, ref RockHitTag rockHitTag)
+        public void Execute([ChunkIndexInQuery] int chunkIndexInQuery, Entity entity, ref Rock rock,
+            ref RockHitTag rockHitTag)
         {
             if (!rockHitTag.m_Hit) return;
 
@@ -371,7 +370,7 @@ namespace AutoFarmers.Farm
                 rock.m_Health = 0f;
                 //state.EntityManager.AddComponent<RockRemoveTag>(entity);
                 //this.
-                
+
                 _ecb.AddComponent<RockRemoveTag>(chunkIndexInQuery, entity);
 
                 //rock.m_BlobRef.Dispose();
@@ -384,7 +383,9 @@ namespace AutoFarmers.Farm
     public partial struct RockRemoveRocks : IJobEntity
     {
         public EntityCommandBuffer.ParallelWriter _ecb;
-        public void Execute([ChunkIndexInQuery] int chunkIndexInQuery, Entity entity, ref Rock rock, RockRemoveTag rockRemoveTag)
+
+        public void Execute([ChunkIndexInQuery] int chunkIndexInQuery, Entity entity, ref Rock rock,
+            RockRemoveTag rockRemoveTag)
         {
             rock.m_BlobRef.Dispose();
             _ecb.DestroyEntity(chunkIndexInQuery, entity);
@@ -399,7 +400,8 @@ namespace AutoFarmers.Farm
         internal TileStatus m_StatusToSet;
 
         [BurstCompile]
-        public void Execute(in ArchetypeChunk chunk, int unfilteredChunkIndex, bool useEnabledMask, in v128 chunkEnabledMask)
+        public void Execute(in ArchetypeChunk chunk, int unfilteredChunkIndex, bool useEnabledMask,
+            in v128 chunkEnabledMask)
         {
             var components = chunk.GetNativeArray(ref m_Handle);
 
@@ -413,7 +415,6 @@ namespace AutoFarmers.Farm
                     components[i] = tile;
                     break;
                 }
-
             }
         }
     }
@@ -428,7 +429,7 @@ namespace AutoFarmers.Farm
         {
             foreach (var id in m_TileIds)
             {
-                if(tile.m_Id == id)
+                if (tile.m_Id == id)
                 {
                     tile.m_Status = TileStatus.None;
                 }
@@ -446,7 +447,8 @@ namespace AutoFarmers.Farm
         [NativeDisableParallelForRestriction] public NativeReference<Tile> m_Tile;
 
         [BurstCompile]
-        public void Execute(in ArchetypeChunk chunk, int unfilteredChunkIndex, bool useEnabledMask, in v128 chunkEnabledMask)
+        public void Execute(in ArchetypeChunk chunk, int unfilteredChunkIndex, bool useEnabledMask,
+            in v128 chunkEnabledMask)
         {
             var components = chunk.GetNativeArray(ref m_Handle);
             for (int i = 0; i < components.Length; i++)
@@ -459,7 +461,6 @@ namespace AutoFarmers.Farm
                     m_Status.Value = tile.m_Status;
                     return;
                 }
-
             }
         }
     }
@@ -471,7 +472,7 @@ namespace AutoFarmers.Farm
 
         public void Execute(ref Tile tile)
         {
-            if(tile.m_Status == TileStatus.None)
+            if (tile.m_Status == TileStatus.None)
             {
                 m_EmptyTiles.Add(tile);
             }

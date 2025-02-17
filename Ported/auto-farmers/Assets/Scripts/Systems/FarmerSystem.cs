@@ -1,4 +1,4 @@
-namespace AutoFarmers.Farmers
+namespace AutoFarmers.Farmer
 {
     using AutoFarmers.Farm;
     using Unity.Burst;
@@ -48,7 +48,6 @@ namespace AutoFarmers.Farmers
 
         public void OnDestroy(ref SystemState state)
         {
-            m_FarmersToMoveEQ.Dispose();
         }
 
         public void OnStartRunning(ref SystemState state)
@@ -85,8 +84,17 @@ namespace AutoFarmers.Farmers
             Tile spawnTile = getEmptyTilesJob.m_EmptyTiles[m_Random.NextInt(0, getEmptyTilesJob.m_EmptyTiles.Length)];
             var farmerEntity = state.EntityManager.CreateEntity();
             state.EntityManager.AddComponentData(farmerEntity, new Farmer { m_Id = m_FarmerCount, m_CurrentTile = spawnTile, m_Position = spawnTile.m_Position });
-            m_FarmerCount++;
+            state.EntityManager.AddComponentData(farmerEntity, new FarmerStateMachine(){m_CurrentState = new FarmerState(){CurrentTypeId = FarmerState.TypeId.DoNothingState}});
             
+            state.EntityManager.AddBuffer<FarmerState>(farmerEntity);
+            var stateBuffer = state.EntityManager.GetBuffer<FarmerState>(farmerEntity, false);
+
+            stateBuffer.Add(new DoNothingState());
+            stateBuffer.Add(new MovingState() { m_Speed = 2f, m_StoppingDistance = 0.5f});
+            stateBuffer.Add(new RockMiningState() { m_Damage = 3, m_HitRate = 2f});
+            
+            m_FarmerCount++;
+
             return farmerEntity;
         }
 
@@ -96,6 +104,30 @@ namespace AutoFarmers.Farmers
         }
     }
 
+    
+    public struct FirstFarmer : IComponentData { }
+
+    public struct Farmer : IComponentData
+    {
+        public int m_Id;
+        public float3 m_Position;
+        public Tile m_CurrentTile;
+        public Tile m_TargetTile;
+    }
+
+    [InternalBufferCapacity(0)]
+    public partial struct FarmerState : IBufferElementData
+    {
+    }
+    
+    public struct FarmerStateMachine : IComponentData
+    {
+        public FarmerState m_CurrentState;
+       
+        public bool IsInitialized;
+        public int TransitionToStateIndex; 
+    }
+    
     public struct FarmerMove : IComponentData
     {
         public float3 _Location;

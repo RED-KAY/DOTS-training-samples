@@ -497,13 +497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513dfe3e29ab77c488e543016446aea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _debugCanvas: {fileID: 6160579528417809118, guid: d34723038c1b8614098e85b02a05e3e5,
-    type: 3}
-  _parent: {fileID: 458742141}
-  _rockIdTextColor: {r: 0.90943396, g: 0.3794452, b: 0.13555704, a: 1}
-  _rockId: {fileID: 0}
-  _locationId: {fileID: 0}
-  _debugPanel: {fileID: 553663969}
+  m_TileDebugCanvas: {fileID: 0}
+  m_RockIdTextColor: {r: 0.81886786, g: 0.4246376, b: 0.21475962, a: 1}
 --- !u!4 &458742141
 Transform:
   m_ObjectHideFlags: 0
@@ -1285,7 +1280,8 @@ MonoBehaviour:
     type: 3}
   m_DebugInputFieldPrefab: {fileID: 9021203355819178522, guid: fdbaf098b5c541a4eb514adb3649bf68,
     type: 3}
-  m_DebugButtonPrefab: {fileID: 0}
+  m_DebugButtonPrefab: {fileID: 8143796675766638254, guid: bfef9e4f0a663a346858b6976ec6dfc1,
+    type: 3}
   m_Contents: {fileID: 510415705}
 --- !u!4 &1703186524
 Transform:
@@ -1474,7 +1470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.89000005, y: 0.96421194}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.2655182, y: -0.23580933}
+  m_AnchoredPosition: {x: 1.2655106, y: -0.23580933}
   m_SizeDelta: {x: 2.6716003, y: -0.32839966}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954984310
@@ -1667,7 +1663,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.65
+  m_fontSize: 16.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

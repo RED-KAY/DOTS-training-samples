@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.trove.polymorphicstructs": "https://github.com/PhilSA/Trove.git?path=/com.trove.polymorphicstructs",
     "com.unity.ai.navigation": "2.0.5",
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.entities": "1.3.2",

@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 namespace DebugTool.UI
 {
     public class DebugToolsView : MonoBehaviour
     {
         protected DTEntry m_EntryData;
+        [SerializeField] protected TextMeshProUGUI m_Title;
 
         public int Id
         {
@@ -22,6 +24,7 @@ namespace DebugTool.UI
         public virtual void Initialize(DTEntry entryData)
         {
             m_EntryData = entryData;
+            m_Title.text = m_EntryData.m_Title;
         }
 
         protected bool m_StartCalled;

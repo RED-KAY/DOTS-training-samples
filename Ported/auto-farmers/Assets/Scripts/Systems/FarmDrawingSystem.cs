@@ -1,13 +1,14 @@
-using System.Linq;
-using Unity.Burst;
-using Unity.Collections;
-using Unity.Entities;
-using Unity.Mathematics;
-using UnityEngine;
-using Matrix4x4 = UnityEngine.Matrix4x4;
-
 namespace AutoFarmers.Farm
 {
+    using System.Linq;
+    using AutoFarmers.Farmer;
+    using Unity.Burst;
+    using Unity.Collections;
+    using Unity.Entities;
+    using Unity.Mathematics;
+    using UnityEngine;
+    using Matrix4x4 = UnityEngine.Matrix4x4;
+
     [UpdateInGroup(typeof(PresentationSystemGroup))]
     public partial class FarmDrawingSystem : SystemBase
     {
@@ -31,18 +32,19 @@ namespace AutoFarmers.Farm
         protected override void OnStartRunning()
         {
             var query = GetEntityQuery(typeof(FarmDrawing));
-            if(query.CalculateEntityCount() > 0)
+            if (query.CalculateEntityCount() > 0)
             {
                 m_FarmDrawing = EntityManager.GetSharedComponentManaged<FarmDrawing>(query.GetSingletonEntity());
 
                 int totalCellCount = m_FarmDrawing.m_Size.x * m_FarmDrawing.m_Size.y;
                 totalCellCount = GetEntityQuery(typeof(Tile)).CalculateEntityCount();
 
-                m_FarmCells = new Matrix4x4[(int) math.ceil((float)totalCellCount / (float)m_InstancesPerBatch)][];
+                m_FarmCells = new Matrix4x4[(int)math.ceil((float)totalCellCount / (float)m_InstancesPerBatch)][];
 
-                for (int i = 0; i<m_FarmCells.Length; i++)
+                for (int i = 0; i < m_FarmCells.Length; i++)
                 {
-                    m_FarmCells[i] = new Matrix4x4[math.min(m_InstancesPerBatch, totalCellCount - i * m_InstancesPerBatch)];
+                    m_FarmCells[i] =
+                        new Matrix4x4[math.min(m_InstancesPerBatch, totalCellCount - i * m_InstancesPerBatch)];
                 }
 
                 int r = 0, c = 0;
@@ -50,7 +52,9 @@ namespace AutoFarmers.Farm
 
                 foreach (var tile in SystemAPI.Query<RefRO<Tile>>())
                 {
-                    m_FarmCells[r][c] = Matrix4x4.TRS(new UnityEngine.Vector3(tile.ValueRO.m_Position.x, 0f, tile.ValueRO.m_Position.z), Quaternion.Euler(90f, 0f, 0f), Vector3.one);
+                    m_FarmCells[r][c] =
+                        Matrix4x4.TRS(new UnityEngine.Vector3(tile.ValueRO.m_Position.x, 0f, tile.ValueRO.m_Position.z),
+                            Quaternion.Euler(90f, 0f, 0f), Vector3.one);
 
                     if (c < m_FarmCells[r].Length - 1)
                         c++;
@@ -63,7 +67,6 @@ namespace AutoFarmers.Farm
                             break;
                     }
                 }
-
             }
         }
 
@@ -87,12 +90,14 @@ namespace AutoFarmers.Farm
                 m_Rocks[i] = new Matrix4x4[math.min(m_InstancesPerBatch, totalRocks - i * m_InstancesPerBatch)];
             }
 
-            int r =0, c = 0;
+            int r = 0, c = 0;
             foreach (var rock in SystemAPI.Query<RefRO<Rock>>())
             {
                 for (int i = 0; i < rock.ValueRO.m_BlobRef.Value.m_Rocks.Length; i++)
                 {
-                    Vector3 position = new Vector3(rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.x, rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.y, rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.z);
+                    Vector3 position = new Vector3(rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.x,
+                        rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.y,
+                        rock.ValueRO.m_BlobRef.Value.m_Rocks[i].m_Position.z);
                     //Debug.Log(position + ", " + rock.ValueRO.m_RockId);
                     m_Rocks[r][c] = Matrix4x4.TRS(position, Quaternion.identity, Vector3.one);
 
@@ -115,7 +120,7 @@ namespace AutoFarmers.Farm
                 }
             }
         }
-        
+
         private void UpdateFarmerMatrices()
         {
             var query = GetEntityQuery(typeof(Farmer));
@@ -128,10 +133,12 @@ namespace AutoFarmers.Farm
             }
 
             Debug.Log("farmers len: " + m_Farmers.Length + ", len: " + len);
-            int r=0; int c=0;
+            int r = 0;
+            int c = 0;
             foreach (var farmer in SystemAPI.Query<RefRO<Farmer>>())
             {
-                Vector3 position = new Vector3(farmer.ValueRO.m_Position.x, farmer.ValueRO.m_Position.y+1, farmer.ValueRO.m_Position.z);
+                Vector3 position = new Vector3(farmer.ValueRO.m_Position.x, farmer.ValueRO.m_Position.y + 1,
+                    farmer.ValueRO.m_Position.z);
 
                 m_Farmers[r][c] = Matrix4x4.TRS(position, Quaternion.identity, m_FarmerScale);
 
@@ -156,7 +163,6 @@ namespace AutoFarmers.Farm
 
         protected override void OnUpdate()
         {
-
             UpdateRocksMatrices();
             UpdateFarmerMatrices();
 
@@ -164,7 +170,8 @@ namespace AutoFarmers.Farm
             {
                 for (int i = 0; i < m_FarmCells.Length; i++)
                 {
-                    Graphics.DrawMeshInstanced(m_FarmDrawing.m_GroundMesh, 0, m_FarmDrawing.m_GroundMaterial, m_FarmCells[i]);
+                    Graphics.DrawMeshInstanced(m_FarmDrawing.m_GroundMesh, 0, m_FarmDrawing.m_GroundMaterial,
+                        m_FarmCells[i]);
                 }
 
                 for (int i = 0; i < m_Rocks.Length; i++)
@@ -174,8 +181,8 @@ namespace AutoFarmers.Farm
 
                 for (int i = 0; i < m_Farmers.Length; i++)
                 {
-                    Graphics.DrawMeshInstanced(m_FarmDrawing.m_FarmerMesh, 0, m_FarmDrawing.m_FarmerMaterial, m_Farmers[i]);
-
+                    Graphics.DrawMeshInstanced(m_FarmDrawing.m_FarmerMesh, 0, m_FarmDrawing.m_FarmerMaterial,
+                        m_Farmers[i]);
                 }
             }
         }
@@ -185,6 +192,7 @@ namespace AutoFarmers.Farm
     public partial struct RocksTotalCountJob : IJobEntity
     {
         public NativeReference<int> m_Count;
+
         private void Execute(ref Rock rock)
         {
             m_Count.Value += rock.m_BlobRef.Value.m_Rocks.Length;

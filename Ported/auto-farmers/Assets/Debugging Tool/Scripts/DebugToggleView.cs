@@ -50,6 +50,7 @@ namespace DebugTool.UI
                 m_MyRectTransform.sizeDelta += new Vector2(0, 20f);
                 TextMeshProUGUI tmp = t.transform.Find("Label").GetComponent<TextMeshProUGUI>();
                 tmp.text = labels[i];
+                t.name = labels[i];
                 if (values.Length <= 0 || values.Length - 1 < i)
                     t.isOn = false;
                 else
@@ -57,14 +58,18 @@ namespace DebugTool.UI
 
                 t.group = m_ToggleGroup;
 
-                t.onValueChanged.AddListener(OnValueChanged);
+                t.onValueChanged.AddListener((bool value) =>
+                {
+                    OnValueChanged(t.name, value);
+                });
             }
         }
 
-        private void OnValueChanged(bool arg0)
+        private void OnValueChanged(string label, bool arg0)
         {
             if (!arg0) return;
             MyEventManager.TriggerEvent<int, bool>(Events.Debug.k_OnDebugingSettingChanged, Id, arg0);
+            m_EntryData.m_Action?.Invoke(Id, label);
         }
     }
 }
